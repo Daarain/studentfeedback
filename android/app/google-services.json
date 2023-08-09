@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "290571681787",
+    "project_id": "studentfeedback-52c35",
+    "storage_bucket": "studentfeedback-52c35.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:290571681787:android:e6242083729c5c4a38155e",
+        "android_client_info": {
+          "package_name": "com.example.studentfeedback"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "290571681787-u11mlthl4kgrgkqme6341r1vb3td792e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx6k7XqjNbgphWuowWll0_ATWCJ5xL87Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "290571681787-u11mlthl4kgrgkqme6341r1vb3td792e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "290571681787-4ctknb6aj1spkmg9b4adk1rsvut9emfs.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.studentfeedback"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:290571681787:android:f3b494e59b93d51438155e",
+        "android_client_info": {
+          "package_name": "com.example.untitled"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "290571681787-u11mlthl4kgrgkqme6341r1vb3td792e.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBx6k7XqjNbgphWuowWll0_ATWCJ5xL87Q"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "290571681787-u11mlthl4kgrgkqme6341r1vb3td792e.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "290571681787-4ctknb6aj1spkmg9b4adk1rsvut9emfs.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.studentfeedback"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
