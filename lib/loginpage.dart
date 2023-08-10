@@ -1,6 +1,7 @@
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:studentfeedback/homepage_2ndsem.dart';
 import 'package:studentfeedback/homepage_5thsem.dart';
 class loginpage extends StatefulWidget {
   loginpage({Key? key}) : super(key: key);
@@ -91,7 +92,7 @@ void toast2(){
          if(user == storedUsername){
            if(pass == storedPassword){
          toast();
-          Navigator.pushReplacementNamed(context, 'homepage_2ndsem');
+          Navigator.pushReplacementNamed(context,'homepage_3rdsem' );
            }
          }else if(pass != storedPassword) {
            toast2();
@@ -201,7 +202,7 @@ void toast2(){
                     width: MediaQuery.of(context).size.width * 0.5,
                     height: MediaQuery.of(context).size.height * 0.06,
                     padding: EdgeInsets.fromLTRB(
-                        MediaQuery.of(context).size.width * 0.1, 0, 0, 0),
+                        MediaQuery.of(context).size.width * 0.04, 0, 0, 0),
                     child: ElevatedButton(
                       onPressed: () {
                         // Navigator.pushNamed(context, 'home_page');
@@ -236,7 +237,8 @@ void toast2(){
                   ),
                   SizedBox(
                     width: MediaQuery.of(context).size.width * 0.03,
-                  )
+                  ),
+
                 ],
               )
             ],
