@@ -3,13 +3,14 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:studentfeedback/firebase_options.dart';
 import 'package:studentfeedback/forgotpassword.dart';
-import 'package:studentfeedback/homepage_1stsem.dart';
-import 'package:studentfeedback/homepage_2ndsem.dart';
-import 'package:studentfeedback/homepage_3rdsem.dart';
-import 'package:studentfeedback/homepage_4thsem.dart';
-import 'package:studentfeedback/homepage_5thsem.dart';
-import 'package:studentfeedback/homepage_6thSem.dart';
+
 import 'package:studentfeedback/loginpage.dart';
+import 'package:studentfeedback/select_subjects_screens/homepage_1stsem.dart';
+import 'package:studentfeedback/select_subjects_screens/homepage_2ndsem.dart';
+import 'package:studentfeedback/select_subjects_screens/homepage_3rdsem.dart';
+import 'package:studentfeedback/select_subjects_screens/homepage_4thsem.dart';
+import 'package:studentfeedback/select_subjects_screens/homepage_5thsem.dart';
+import 'package:studentfeedback/select_subjects_screens/homepage_6thSem.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -29,6 +30,9 @@ class Myapp extends StatefulWidget {
 }
 
 class _MyappState extends State<Myapp> {
+
+
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(

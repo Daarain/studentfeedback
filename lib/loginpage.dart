@@ -2,8 +2,7 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:studentfeedback/AppColors.dart';
-import 'package:studentfeedback/homepage_2ndsem.dart';
-import 'package:studentfeedback/homepage_5thsem.dart';
+
 import 'colorfile.dart';
 
 class loginpage extends StatefulWidget {
@@ -16,7 +15,41 @@ class loginpage extends StatefulWidget {
 class _loginpageState extends State<loginpage> {
   TextEditingController Username = TextEditingController();
   TextEditingController Password = TextEditingController();
-  late DataSnapshot userSnapshot;
+  TextEditingController year = TextEditingController();
+
+  List<TextEditingController> arguments = [
+    TextEditingController(),
+    TextEditingController(),
+  ];
+
+  void choosinguserforauthprocess() {
+    switch (year.text) {
+      case "FYFS":
+        loginUse1();
+        break;
+
+      case "FYSS":
+        loginUse2();
+        break;
+
+      case "SYFS":
+        loginUse3();
+        break;
+
+      case "SYSS":
+        loginUse4();
+        break;
+
+      case "TYFS":
+        loginUse5();
+        break;
+
+      case "TYSS":
+        loginUse6();
+        break;
+    }
+  }
+
   void toast() {
     Fluttertoast.showToast(
         msg: 'Logging in',
@@ -28,51 +61,11 @@ class _loginpageState extends State<loginpage> {
 
   void toast2() {
     Fluttertoast.showToast(
-        msg: 'Wrong Username or Password',
+        msg: 'Invalid Enrollment no or Password',
         toastLength: Toast.LENGTH_SHORT,
         backgroundColor: Colors.black,
         fontSize: 16,
         textColor: Colors.white);
-  }
-
-  Future<void> loginuser() async {
-    try {
-      String? user = Username.text;
-      String? pass = Password.text;
-      DatabaseReference databaseRef =
-          FirebaseDatabase.instance.reference().child('student');
-
-      Map<dynamic, dynamic>? userData;
-
-      // Check if the user already exists in the database
-      await databaseRef
-          .child(user)
-          .once()
-          .then((DatabaseEvent databaseEvent) async {
-        userSnapshot = databaseEvent.snapshot;
-        print(userSnapshot.value.toString());
-        userData = userSnapshot.value as Map?;
-        String? storedUsername = userData?['name'];
-        String? storedPassword = userData?['password'];
-
-        if (user == storedUsername) {
-          if (pass == storedPassword) {
-            toast();
-            Navigator.pushReplacementNamed(context, 'homepage_2ndsem');
-          }
-        } else if (pass != storedPassword) {
-          toast2();
-          print('wrong password');
-        }
-      });
-      // await databaseRef.child(user).set({
-      //   'name': user,
-      //   'password': pass
-      // });
-      // Check if the user already exists in the database
-    } catch (e) {
-      print('Error storing data: $e');
-    }
   }
 
   @override
@@ -145,7 +138,7 @@ class _loginpageState extends State<loginpage> {
                 child: Column(
                   children: [
                     SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.05,
+                      height: MediaQuery.of(context).size.height * 0.02,
                     ),
                     Container(
                       child: Text(
@@ -157,13 +150,42 @@ class _loginpageState extends State<loginpage> {
                       ),
                     ),
                     SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.05,
+                      height: MediaQuery.of(context).size.height * 0.03,
                     ),
                     Container(
                       width: MediaQuery.of(context).size.width * 0.6,
                       child: TextField(
+                        controller: year,
+                        //   obscureText: true,
+                        decoration: const InputDecoration(
+                            hintText: 'Enter in uppercase',
+                            labelText: 'Year ',
+                            fillColor: Colors.white,
+                            filled: true,
+                            labelStyle: TextStyle(color: Colors.black),
+                            floatingLabelBehavior: FloatingLabelBehavior.always,
+                            contentPadding: EdgeInsets.symmetric(
+                                vertical: 10, horizontal: 16),
+                            border: OutlineInputBorder(),
+                            enabledBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                              color: Colors.blueAccent,
+                              width: 2,
+                            )),
+                            focusedBorder: OutlineInputBorder(
+                                borderSide: BorderSide(
+                                    color: Colors.deepPurple, width: 2))),
+                      ),
+                    ),
+                    Container(
+                      height: MediaQuery.of(context).size.height * 0.02,
+                      child: Text("Enter your year and shift"),
+                    ),
+                    SizedBox(height: MediaQuery.of(context).size.height * 0.02),
+                    Container(
+                      width: MediaQuery.of(context).size.width * 0.6,
+                      child: TextField(
                         controller: Username,
-                        obscureText: true,
                         decoration: const InputDecoration(
                             hintText: 'Enrollment No',
                             labelText: 'Enrollment no ',
@@ -185,13 +207,13 @@ class _loginpageState extends State<loginpage> {
                       ),
                     ),
                     SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.05,
+                      height: MediaQuery.of(context).size.height * 0.03,
                     ),
                     Container(
                       width: MediaQuery.of(context).size.width * 0.6,
                       child: TextField(
                         controller: Password,
-                        obscureText: true,
+                        //   obscureText: true,
                         decoration: const InputDecoration(
                             hintText: 'Password',
                             labelText: 'Password ',
@@ -213,26 +235,23 @@ class _loginpageState extends State<loginpage> {
                       ),
                     ),
                     SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.05,
+                      height: MediaQuery.of(context).size.height * 0.04,
                     ),
                     Container(
                       height: MediaQuery.of(context).size.height * 0.05,
                       width: MediaQuery.of(context).size.width * 0.3,
                       child: ElevatedButton(
-                        onPressed: loginuser,
+                        onPressed: choosinguserforauthprocess,
                         child: Text(
                           'Login',
                           style: TextStyle(
                             fontSize: MediaQuery.of(context).size.height * 0.02,
                           ),
                         ),
-
                         style: ElevatedButton.styleFrom(
                             backgroundColor: Colors.blueAccent,
-
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30))),
-
                       ),
                     )
                   ],
@@ -241,5 +260,239 @@ class _loginpageState extends State<loginpage> {
             ],
           ),
         ));
+  }
+
+  Future<void> loginUse1() async {
+    try {
+      String? enteredUsername = Username.text;
+      String? enteredPassword = Password.text;
+
+      DatabaseReference databaseReference = FirebaseDatabase.instance
+          .reference()
+          .child('student')
+          .child('year')
+          .child('FY')
+          .child('FS');
+
+      DatabaseEvent userSnapshot =
+          await databaseReference.child(enteredUsername).once();
+
+      if (userSnapshot.snapshot.value != null) {
+        Map<String, dynamic> userData =
+            Map<String, dynamic>.from(userSnapshot.snapshot.value as Map);
+        String storedPassword = userData['password'];
+        print(storedPassword);
+        if (enteredPassword == storedPassword) {
+          // Password matches, perform the necessary actions (e.g., navigate to the next screen).
+          toast();
+          Navigator.pushReplacementNamed(context, 'homepage_1stsem',
+              arguments: arguments);
+        } else {
+          // Incorrect password. Display an error message or perform appropriate handling.
+          toast2();
+          print('Wrong password');
+        }
+      } else {
+        // User not found. Display an error message or perform appropriate handling.
+        print('User not found');
+      }
+    } catch (e) {
+      print('Error: $e');
+    }
+  }
+
+  Future<void> loginUse2() async {
+    try {
+      String? enteredUsername = Username.text;
+      String? enteredPassword = Password.text;
+
+      DatabaseReference databaseReference = FirebaseDatabase.instance
+          .reference()
+          .child('student')
+          .child('year')
+          .child('FY')
+          .child('SS');
+
+      DatabaseEvent userSnapshot =
+          await databaseReference.child(enteredUsername).once();
+
+      if (userSnapshot.snapshot.value != null) {
+        Map<String, dynamic> userData =
+            Map<String, dynamic>.from(userSnapshot.snapshot.value as Map);
+        String storedPassword = userData['password'];
+        print(storedPassword);
+        if (enteredPassword == storedPassword) {
+          // Password matches, perform the necessary actions (e.g., navigate to the next screen).
+          toast();
+          Navigator.pushReplacementNamed(context, 'homepage_1stsem',
+              arguments: arguments);
+        } else {
+          // Incorrect password. Display an error message or perform appropriate handling.
+          toast2();
+          print('Wrong password');
+        }
+      } else {
+        // User not found. Display an error message or perform appropriate handling.
+        print('User not found');
+      }
+    } catch (e) {
+      print('Error: $e');
+    }
+  }
+
+  Future<void> loginUse3() async {
+    try {
+      String? enteredUsername = Username.text;
+      String? enteredPassword = Password.text;
+
+      DatabaseReference databaseReference = FirebaseDatabase.instance
+          .reference()
+          .child('student')
+          .child('year')
+          .child('SY')
+          .child('FS');
+
+      DatabaseEvent userSnapshot =
+          await databaseReference.child(enteredUsername).once();
+
+      if (userSnapshot.snapshot.value != null) {
+        Map<String, dynamic> userData =
+            Map<String, dynamic>.from(userSnapshot.snapshot.value as Map);
+        String storedPassword = userData['password'];
+        print(storedPassword);
+        if (enteredPassword == storedPassword) {
+          // Password matches, perform the necessary actions (e.g., navigate to the next screen).
+          toast();
+          Navigator.pushReplacementNamed(context, 'homepage_3rdsem',
+              arguments: arguments);
+        } else {
+          // Incorrect password. Display an error message or perform appropriate handling.
+          toast2();
+          print('Wrong password');
+        }
+      } else {
+        // User not found. Display an error message or perform appropriate handling.
+        print('User not found');
+      }
+    } catch (e) {
+      print('Error: $e');
+    }
+  }
+
+  Future<void> loginUse4() async {
+    try {
+      String? enteredUsername = Username.text;
+      String? enteredPassword = Password.text;
+
+      DatabaseReference databaseReference = FirebaseDatabase.instance
+          .reference()
+          .child('student')
+          .child('year')
+          .child('SY')
+          .child('SS');
+
+      DatabaseEvent userSnapshot =
+          await databaseReference.child(enteredUsername).once();
+
+      if (userSnapshot.snapshot.value != null) {
+        Map<String, dynamic> userData =
+            Map<String, dynamic>.from(userSnapshot.snapshot.value as Map);
+        String storedPassword = userData['password'];
+        print(storedPassword);
+        if (enteredPassword == storedPassword) {
+          // Password matches, perform the necessary actions (e.g., navigate to the next screen).
+          toast();
+          Navigator.pushReplacementNamed(context, 'homepage_3rdsem',
+              arguments: arguments);
+        } else {
+          // Incorrect password. Display an error message or perform appropriate handling.
+          toast2();
+          print('Wrong password');
+        }
+      } else {
+        // User not found. Display an error message or perform appropriate handling.
+        print('User not found');
+      }
+    } catch (e) {
+      print('Error: $e');
+    }
+  }
+
+  Future<void> loginUse5() async {
+    try {
+      String? enteredUsername = Username.text;
+      String? enteredPassword = Password.text;
+
+      DatabaseReference databaseReference = FirebaseDatabase.instance
+          .reference()
+          .child('student')
+          .child('year')
+          .child('TY')
+          .child('FS');
+
+      DatabaseEvent userSnapshot =
+          await databaseReference.child(enteredUsername).once();
+
+      if (userSnapshot.snapshot.value != null) {
+        Map<String, dynamic> userData =
+            Map<String, dynamic>.from(userSnapshot.snapshot.value as Map);
+        String storedPassword = userData['password'];
+        print(storedPassword);
+        if (enteredPassword == storedPassword) {
+          // Password matches, perform the necessary actions (e.g., navigate to the next screen).
+          toast();
+          Navigator.pushReplacementNamed(context, 'homepage_5thsem',
+              arguments: arguments);
+        } else {
+          // Incorrect password. Display an error message or perform appropriate handling.
+          toast2();
+          print('Wrong password');
+        }
+      } else {
+        // User not found. Display an error message or perform appropriate handling.
+        print('User not found');
+      }
+    } catch (e) {
+      print('Error: $e');
+    }
+  }
+
+  Future<void> loginUse6() async {
+    try {
+      String? enteredUsername = Username.text;
+      String? enteredPassword = Password.text;
+
+      DatabaseReference databaseReference = FirebaseDatabase.instance
+          .reference()
+          .child('student')
+          .child('year')
+          .child('TY')
+          .child('SS');
+
+      DatabaseEvent userSnapshot =
+          await databaseReference.child(enteredUsername).once();
+
+      if (userSnapshot.snapshot.value != null) {
+        Map<String, dynamic> userData =
+            Map<String, dynamic>.from(userSnapshot.snapshot.value as Map);
+        String storedPassword = userData['password'];
+        print(storedPassword);
+        if (enteredPassword == storedPassword) {
+          // Password matches, perform the necessary actions (e.g., navigate to the next screen).
+          toast();
+          Navigator.pushReplacementNamed(context, 'homepage_5thsem',
+              arguments: arguments);
+        } else {
+          // Incorrect password. Display an error message or perform appropriate handling.
+          toast2();
+          print('Wrong password');
+        }
+      } else {
+        // User not found. Display an error message or perform appropriate handling.
+        print('User not found');
+      }
+    } catch (e) {
+      print('Error: $e');
+    }
   }
 }
