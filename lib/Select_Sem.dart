@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:studentfeedback/select_subjects_screens/homepage_1stsem.dart';
+import 'package:studentfeedback/select_subjects_screens/homepage_2ndsem.dart';
+import 'package:studentfeedback/select_subjects_screens/homepage_3rdsem.dart';
+import 'package:studentfeedback/select_subjects_screens/homepage_4thsem.dart';
+import 'package:studentfeedback/select_subjects_screens/homepage_5thsem.dart';
+import 'package:studentfeedback/select_subjects_screens/homepage_6thSem.dart';
 
 class Select_Sem extends StatefulWidget {
   const Select_Sem({super.key});
@@ -8,8 +14,13 @@ class Select_Sem extends StatefulWidget {
 }
 
 class _Select_SemState extends State<Select_Sem> {
+
+
   @override
   Widget build(BuildContext context) {
+    final String year1 = ModalRoute.of(context)!.settings.arguments as String;
+
+
     return Container(
       decoration: BoxDecoration(
           gradient: LinearGradient(
@@ -70,7 +81,35 @@ class _Select_SemState extends State<Select_Sem> {
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15)),
                             backgroundColor: Colors.black),
-                        onPressed: () {},
+                        onPressed: () {
+                     print(year1);
+                     switch(year1){
+                       case "FYFS"||"FYSS":
+                         print('switch working');
+                         // Navigator.pushReplacementNamed(context, 'homepage_1stsem');
+
+                         break;
+
+                       case "SYFS"||"SYSS":
+                         print("switch working");
+                         homepage_3rdsem();
+                         break;
+
+
+                       case "TYFS"||"TYSS":
+                         homepage_5thsem();
+
+                         break;
+
+
+
+
+                     }
+
+
+
+
+                        },
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [
@@ -115,7 +154,26 @@ class _Select_SemState extends State<Select_Sem> {
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15)),
                             backgroundColor: Colors.white),
-                        onPressed: () {},
+                        onPressed: () {
+                          switch(year1){
+                          case "FYFS"||"FYSS":
+                            homepage_2ndsem();
+                            break;
+
+                          case "SYFS"||"SYSS":
+                            homepage_4thsem();
+                            break;
+
+
+                          case "TYFS"||"TYSS":
+                            homepage_6thsem();
+                            break;
+
+
+
+
+                        }
+                        },
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
                           children: [

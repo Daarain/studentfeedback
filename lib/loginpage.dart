@@ -17,10 +17,7 @@ class _loginpageState extends State<loginpage> {
   TextEditingController Password = TextEditingController();
   TextEditingController year = TextEditingController();
 
-  List<TextEditingController> arguments = [
-    TextEditingController(),
-    TextEditingController(),
-  ];
+
 
   void choosinguserforauthprocess() {
     switch (year.text) {
@@ -266,6 +263,7 @@ class _loginpageState extends State<loginpage> {
     try {
       String? enteredUsername = Username.text;
       String? enteredPassword = Password.text;
+      String? year1=year.text;
 
       DatabaseReference databaseReference = FirebaseDatabase.instance
           .reference()
@@ -286,7 +284,7 @@ class _loginpageState extends State<loginpage> {
           // Password matches, perform the necessary actions (e.g., navigate to the next screen).
           toast();
           Navigator.pushReplacementNamed(context, 'NAVPAGE',
-              arguments: arguments);
+              arguments: year1);
         } else {
           // Incorrect password. Display an error message or perform appropriate handling.
           toast2();
@@ -305,6 +303,7 @@ class _loginpageState extends State<loginpage> {
     try {
       String? enteredUsername = Username.text;
       String? enteredPassword = Password.text;
+      String? year1=year.text;
 
       DatabaseReference databaseReference = FirebaseDatabase.instance
           .reference()
@@ -325,7 +324,7 @@ class _loginpageState extends State<loginpage> {
           // Password matches, perform the necessary actions (e.g., navigate to the next screen).
           toast();
           Navigator.pushReplacementNamed(context, 'NAVPAGE',
-              arguments: arguments);
+              arguments: year1);
         } else {
           // Incorrect password. Display an error message or perform appropriate handling.
           toast2();
@@ -344,7 +343,7 @@ class _loginpageState extends State<loginpage> {
     try {
       String? enteredUsername = Username.text;
       String? enteredPassword = Password.text;
-
+      String? year1=year.text;
       DatabaseReference databaseReference = FirebaseDatabase.instance
           .reference()
           .child('student')
@@ -364,7 +363,7 @@ class _loginpageState extends State<loginpage> {
           // Password matches, perform the necessary actions (e.g., navigate to the next screen).
           toast();
           Navigator.pushReplacementNamed(context, 'NAVPAGE',
-              arguments: arguments);
+              arguments: year1);
         } else {
           // Incorrect password. Display an error message or perform appropriate handling.
           toast2();
@@ -383,6 +382,7 @@ class _loginpageState extends State<loginpage> {
     try {
       String? enteredUsername = Username.text;
       String? enteredPassword = Password.text;
+      String? year1=year.text;
 
       DatabaseReference databaseReference = FirebaseDatabase.instance
           .reference()
@@ -403,7 +403,7 @@ class _loginpageState extends State<loginpage> {
           // Password matches, perform the necessary actions (e.g., navigate to the next screen).
           toast();
           Navigator.pushReplacementNamed(context, 'NAVPAGE',
-              arguments: arguments);
+              arguments: year1);
         } else {
           // Incorrect password. Display an error message or perform appropriate handling.
           toast2();
@@ -422,6 +422,7 @@ class _loginpageState extends State<loginpage> {
     try {
       String? enteredUsername = Username.text;
       String? enteredPassword = Password.text;
+      String? year1=year.text;
 
       DatabaseReference databaseReference = FirebaseDatabase.instance
           .reference()
@@ -442,7 +443,7 @@ class _loginpageState extends State<loginpage> {
           // Password matches, perform the necessary actions (e.g., navigate to the next screen).
           toast();
           Navigator.pushReplacementNamed(context, 'NAVPAGE',
-              arguments: arguments);
+              arguments: year1);
         } else {
           // Incorrect password. Display an error message or perform appropriate handling.
           toast2();
@@ -461,6 +462,8 @@ class _loginpageState extends State<loginpage> {
     try {
       String? enteredUsername = Username.text;
       String? enteredPassword = Password.text;
+      String? year1=year.text;
+
 
       DatabaseReference databaseReference = FirebaseDatabase.instance
           .reference()
@@ -481,7 +484,7 @@ class _loginpageState extends State<loginpage> {
           // Password matches, perform the necessary actions (e.g., navigate to the next screen).
           toast();
           Navigator.pushReplacementNamed(context, 'NAVPAGE',
-              arguments: arguments);
+              arguments: year1);
         } else {
           // Incorrect password. Display an error message or perform appropriate handling.
           toast2();
