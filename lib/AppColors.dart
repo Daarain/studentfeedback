@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
-
+  static const login_page_bg_color=Color.fromRGBO(120, 220, 255, 1);
   // For Home Page
-
+static const deepblue=Color.fromRGBO(3, 33, 44, 1);
   // Diploma Tech Community Title Text Colors
   static const Color diplomaText = Color.fromARGB(255, 0, 0, 0);
   static const Color techText = Color.fromARGB(255, 0, 0, 0);
@@ -12,7 +12,7 @@ class AppColors {
   // Background Colors
   static const Color upperbackground = Color.fromRGBO(255, 255, 255, 1);
   static const Color lowerbackground = Color.fromRGBO(50, 39, 82, 1);
-
+  static const Color darkblue = Color.fromRGBO(35, 41, 122, 1);
   // Button Colors
   static const Color join_nowButton = Color.fromRGBO(50, 39, 82, 1);
   static const Color learn_moreButton = Color.fromRGBO(255, 255, 255, 1);

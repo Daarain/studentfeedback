@@ -1,8 +1,11 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
+import 'package:studentfeedback/About%20us.dart';
+import 'package:studentfeedback/NAV_PAGE.dart';
+import 'package:studentfeedback/Select_Sem.dart';
 import 'package:studentfeedback/firebase_options.dart';
-import 'package:studentfeedback/forgotpassword.dart';
+
 
 import 'package:studentfeedback/loginpage.dart';
 import 'package:studentfeedback/select_subjects_screens/homepage_1stsem.dart';
@@ -40,7 +43,9 @@ class _MyappState extends State<Myapp> {
         initialRoute: 'login_page',
         routes: {
           'login_page': (context) => loginpage(),
-          'forgot_password': (context) => forgotpassword(),
+           'Select_Sem':(context)=>Select_Sem(),
+          'NAVPAGE':(context)=> NAV_PAGE(),
+          'Aboutus':(context)=>Aboutus(),
           'homepage_5thsem': (context) => homepage_5thsem(),
           'homepage_6thsem': (context) => homepage_6thsem(),
           'homepage_3rdsem': (context) => homepage_3rdsem(),

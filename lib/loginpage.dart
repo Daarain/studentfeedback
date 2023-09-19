@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:studentfeedback/AppColors.dart';
 
-import 'colorfile.dart';
+
 
 class loginpage extends StatefulWidget {
   loginpage({Key? key}) : super(key: key);
@@ -71,7 +71,7 @@ class _loginpageState extends State<loginpage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: color.login_page_bg_color,
+        backgroundColor: AppColors.communityText,
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -285,7 +285,7 @@ class _loginpageState extends State<loginpage> {
         if (enteredPassword == storedPassword) {
           // Password matches, perform the necessary actions (e.g., navigate to the next screen).
           toast();
-          Navigator.pushReplacementNamed(context, 'homepage_1stsem',
+          Navigator.pushReplacementNamed(context, 'NAVPAGE',
               arguments: arguments);
         } else {
           // Incorrect password. Display an error message or perform appropriate handling.
@@ -324,7 +324,7 @@ class _loginpageState extends State<loginpage> {
         if (enteredPassword == storedPassword) {
           // Password matches, perform the necessary actions (e.g., navigate to the next screen).
           toast();
-          Navigator.pushReplacementNamed(context, 'homepage_1stsem',
+          Navigator.pushReplacementNamed(context, 'NAVPAGE',
               arguments: arguments);
         } else {
           // Incorrect password. Display an error message or perform appropriate handling.
@@ -363,7 +363,7 @@ class _loginpageState extends State<loginpage> {
         if (enteredPassword == storedPassword) {
           // Password matches, perform the necessary actions (e.g., navigate to the next screen).
           toast();
-          Navigator.pushReplacementNamed(context, 'homepage_3rdsem',
+          Navigator.pushReplacementNamed(context, 'NAVPAGE',
               arguments: arguments);
         } else {
           // Incorrect password. Display an error message or perform appropriate handling.
@@ -402,7 +402,7 @@ class _loginpageState extends State<loginpage> {
         if (enteredPassword == storedPassword) {
           // Password matches, perform the necessary actions (e.g., navigate to the next screen).
           toast();
-          Navigator.pushReplacementNamed(context, 'homepage_3rdsem',
+          Navigator.pushReplacementNamed(context, 'NAVPAGE',
               arguments: arguments);
         } else {
           // Incorrect password. Display an error message or perform appropriate handling.
@@ -441,7 +441,7 @@ class _loginpageState extends State<loginpage> {
         if (enteredPassword == storedPassword) {
           // Password matches, perform the necessary actions (e.g., navigate to the next screen).
           toast();
-          Navigator.pushReplacementNamed(context, 'homepage_5thsem',
+          Navigator.pushReplacementNamed(context, 'NAVPAGE',
               arguments: arguments);
         } else {
           // Incorrect password. Display an error message or perform appropriate handling.
@@ -480,7 +480,7 @@ class _loginpageState extends State<loginpage> {
         if (enteredPassword == storedPassword) {
           // Password matches, perform the necessary actions (e.g., navigate to the next screen).
           toast();
-          Navigator.pushReplacementNamed(context, 'homepage_5thsem',
+          Navigator.pushReplacementNamed(context, 'NAVPAGE',
               arguments: arguments);
         } else {
           // Incorrect password. Display an error message or perform appropriate handling.
