@@ -14,12 +14,9 @@ class Select_Sem extends StatefulWidget {
 }
 
 class _Select_SemState extends State<Select_Sem> {
-
-
   @override
   Widget build(BuildContext context) {
     final String year1 = ModalRoute.of(context)!.settings.arguments as String;
-
 
     return Container(
       decoration: BoxDecoration(
@@ -68,7 +65,9 @@ class _Select_SemState extends State<Select_Sem> {
                           color: Colors.white),
                     ),
                   ),
-                  SizedBox( height: MediaQuery.of(context).size.height * 0.05,),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.05,
+                  ),
                   Container(
                     height: MediaQuery.of(context).size.height * 0.08,
                     width: MediaQuery.of(context).size.width * 0.7,
@@ -82,33 +81,23 @@ class _Select_SemState extends State<Select_Sem> {
                                 borderRadius: BorderRadius.circular(15)),
                             backgroundColor: Colors.black),
                         onPressed: () {
-                     print(year1);
-                     switch(year1){
-                       case "FYFS"||"FYSS":
-                         print('switch working');
-                         // Navigator.pushReplacementNamed(context, 'homepage_1stsem');
+                          print(year1);
+                          switch (year1) {
+                            case "FYFS" || "FYSS":
+                              print('switch working');
+                              Navigator.pushNamed(context, 'homepage_1stsem');
+                              break;
 
-                         break;
+                            case "SYFS" || "SYSS":
+                              print("switch working");
 
-                       case "SYFS"||"SYSS":
-                         print("switch working");
-                         homepage_3rdsem();
-                         break;
+                              Navigator.pushNamed(context, 'homepage_3rdsem');
+                              break;
 
-
-                       case "TYFS"||"TYSS":
-                         homepage_5thsem();
-
-                         break;
-
-
-
-
-                     }
-
-
-
-
+                            case "TYFS" || "TYSS":
+                              Navigator.pushNamed(context, 'homepage_5thsem');
+                              break;
+                          }
                         },
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -139,9 +128,9 @@ class _Select_SemState extends State<Select_Sem> {
                           ],
                         )),
                   ),
-                  SizedBox(height: MediaQuery.of(context).size.height * 0.08,)
-                  ,
-
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.08,
+                  ),
                   Container(
                     height: MediaQuery.of(context).size.height * 0.08,
                     width: MediaQuery.of(context).size.width * 0.7,
@@ -155,24 +144,19 @@ class _Select_SemState extends State<Select_Sem> {
                                 borderRadius: BorderRadius.circular(15)),
                             backgroundColor: Colors.white),
                         onPressed: () {
-                          switch(year1){
-                          case "FYFS"||"FYSS":
-                            homepage_2ndsem();
-                            break;
+                          switch (year1) {
+                            case "FYFS" || "FYSS":
+                              Navigator.pushNamed(context, 'homepage_2ndsem');
+                              break;
 
-                          case "SYFS"||"SYSS":
-                            homepage_4thsem();
-                            break;
+                            case "SYFS" || "SYSS":
+                              Navigator.pushNamed(context, 'homepage_4thsem');
+                              break;
 
-
-                          case "TYFS"||"TYSS":
-                            homepage_6thsem();
-                            break;
-
-
-
-
-                        }
+                            case "TYFS" || "TYSS":
+                              Navigator.pushNamed(context, 'homepage_6thsem');
+                              break;
+                          }
                         },
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -186,7 +170,7 @@ class _Select_SemState extends State<Select_Sem> {
                                         MediaQuery.of(context).size.height *
                                             0.03,
                                     fontWeight: FontWeight.w500,
-                                color: Colors.black),
+                                    color: Colors.black),
                               ),
                             ),
                             Container(
@@ -197,7 +181,7 @@ class _Select_SemState extends State<Select_Sem> {
                                   color: Colors.black),
                               child: Icon(
                                 Icons.navigate_next,
-                                color: Colors.white ,
+                                color: Colors.white,
                                 size: MediaQuery.of(context).size.height * 0.05,
                               ),
                             ),
