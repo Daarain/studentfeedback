@@ -6,7 +6,7 @@ import 'package:studentfeedback/NAV_PAGE.dart';
 import 'package:studentfeedback/Select_Sem.dart';
 import 'package:studentfeedback/firebase_options.dart';
 
-
+import 'package:studentfeedback/Form.dart';
 import 'package:studentfeedback/loginpage.dart';
 import 'package:studentfeedback/select_subjects_screens/homepage_1stsem.dart';
 import 'package:studentfeedback/select_subjects_screens/homepage_2ndsem.dart';
@@ -46,6 +46,7 @@ class _MyappState extends State<Myapp> {
            'Select_Sem':(context)=>Select_Sem(),
           'NAVPAGE':(context)=> NAV_PAGE(),
           'Aboutus':(context)=>Aboutus(),
+          'Form1' :(context) => Form1(),
           'homepage_5thsem': (context) => homepage_5thsem(),
           'homepage_6thsem': (context) => homepage_6thsem(),
           'homepage_3rdsem': (context) => homepage_3rdsem(),
