@@ -68,7 +68,7 @@ class _loginpageState extends State<loginpage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: AppColors.communityText,
+        backgroundColor: Colors.lightBlueAccent,
         body: SingleChildScrollView(
           child: Column(
             children: [
@@ -283,7 +283,7 @@ class _loginpageState extends State<loginpage> {
         if (enteredPassword == storedPassword) {
           // Password matches, perform the necessary actions (e.g., navigate to the next screen).
           toast();
-          Navigator.pushReplacementNamed(context, 'Form1',
+          Navigator.pushReplacementNamed(context, 'NAVPAGE',
               arguments: year1);
         } else {
           // Incorrect password. Display an error message or perform appropriate handling.
@@ -344,6 +344,9 @@ class _loginpageState extends State<loginpage> {
       String? enteredUsername = Username.text;
       String? enteredPassword = Password.text;
       String? year1=year.text;
+      String? shift="FS"  ;
+      String? year2="FY";
+
       DatabaseReference databaseReference = FirebaseDatabase.instance
           .reference()
           .child('student')

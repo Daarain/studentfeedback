@@ -1,15 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:studentfeedback/About%20us.dart';
 import 'package:studentfeedback/AppColors.dart';
+import 'package:studentfeedback/Homepage.dart';
+import 'package:studentfeedback/Select_Sem.dart';
 
 
 class homepage_1stsem extends StatefulWidget {
   const homepage_1stsem({super.key});
+
 
   @override
   State<homepage_1stsem> createState() => _homepage_1stsemState();
 }
 
 class _homepage_1stsemState extends State<homepage_1stsem> {
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,6 +29,7 @@ class _homepage_1stsemState extends State<homepage_1stsem> {
         centerTitle: true,
 
       ),
+
       body: SingleChildScrollView(
         child: Column(
           children: [
@@ -75,7 +81,9 @@ class _homepage_1stsemState extends State<homepage_1stsem> {
                       height: MediaQuery.of(context).size.height * 0.05,
                       width: MediaQuery.of(context).size.width * 0.9,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, 'Form1');
+                        },
                         child: Row(
                           children: [
                             Expanded(
@@ -106,7 +114,9 @@ class _homepage_1stsemState extends State<homepage_1stsem> {
                       height: MediaQuery.of(context).size.height * 0.05,
                       width: MediaQuery.of(context).size.width * 0.9,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, 'Form1');
+                        },
                         child: Row(
                           children: [
                             Expanded(
@@ -137,7 +147,9 @@ class _homepage_1stsemState extends State<homepage_1stsem> {
                       height: MediaQuery.of(context).size.height * 0.05,
                       width: MediaQuery.of(context).size.width * 0.9,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, "Form1");
+                        },
                         child: Row(
                           children: [
                             Expanded(
@@ -168,7 +180,9 @@ class _homepage_1stsemState extends State<homepage_1stsem> {
                       height: MediaQuery.of(context).size.height * 0.06,
                       width: MediaQuery.of(context).size.width * 0.9,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, "Form1");
+                        },
                         child: Row(
                           children: [
                             Expanded(
@@ -199,7 +213,7 @@ class _homepage_1stsemState extends State<homepage_1stsem> {
                       height: MediaQuery.of(context).size.height * 0.05,
                       width: MediaQuery.of(context).size.width * 0.9,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () { Navigator.pushNamed(context, "Form1");},
                         child: Row(
                           children: [
                             Expanded(
@@ -230,7 +244,7 @@ class _homepage_1stsemState extends State<homepage_1stsem> {
                       height: MediaQuery.of(context).size.height * 0.05,
                       width: MediaQuery.of(context).size.width * 0.9,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () { Navigator.pushNamed(context, "Form1");},
                         child: Row(
                           children: [
                             Expanded(
