@@ -1,7 +1,9 @@
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
+import 'package:provider/provider.dart';
 import 'package:studentfeedback/AppColors.dart';
+import 'package:studentfeedback/dataprovider.dart';
 
 
 
@@ -16,11 +18,18 @@ class _loginpageState extends State<loginpage> {
   TextEditingController Username = TextEditingController();
   TextEditingController Password = TextEditingController();
   TextEditingController year = TextEditingController();
+  TextEditingController shift = TextEditingController();
+   late String year_shift;
+
+
 
 
 
   void choosinguserforauthprocess() {
-    switch (year.text) {
+    year_shift=year.text+shift.text;
+    print(year_shift);
+
+    switch (year_shift) {
       case "FYFS":
         loginUse1();
         break;
@@ -67,203 +76,241 @@ class _loginpageState extends State<loginpage> {
 
   @override
   Widget build(BuildContext context) {
+    final dp1=Provider.of<dataprovider>(context,listen: false);
+    dp1.setdata(Username.text, Password.text, shift.text, year.text);
+
+
     return Scaffold(
         backgroundColor: Colors.lightBlueAccent,
         body: SingleChildScrollView(
-          child: Column(
-            children: [
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.1,
-              ),
-              Container(
-                height: MediaQuery.of(context).size.height * 0.25,
-                // color: Colors.blue,
-                alignment: Alignment.center,
-                child: CircleAvatar(
-                  backgroundColor: Colors.transparent,
-                  radius: MediaQuery.of(context).size.width * 0.4,
-                  child: Image.asset(
-                    'assets/images/Gpmlogo1.png',
-                    scale: .9,
+          child: Padding(
+            padding: EdgeInsets.all(MediaQuery.of(context).size.width*0.06),
+            child: Column(
+              children: [
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.04,
+                ),
+                Container(
+                  height: MediaQuery.of(context).size.height * 0.25,
+                  // color: Colors.blue,
+                  alignment: Alignment.center,
+                  child: CircleAvatar(
+                    backgroundColor: Colors.transparent,
+                    radius: MediaQuery.of(context).size.width * 0.4,
+                    child: Image.asset(
+                      'assets/images/Gpmlogo1.png',
+                      scale: .9,
+                    ),
                   ),
                 ),
-              ),
-              Row(
-                children: [
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.17,
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.17,
+                ),
+                Container(
+                  alignment: Alignment.center,
+                  height: MediaQuery.of(context).size.height * 0.06,
+                  width: MediaQuery.of(context).size.width * 0.9,
+                  child: Text(
+                    'Government Polytechnic ',
+                    style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: MediaQuery.of(context).size.height * 0.028),
                   ),
-                  Container(
-                    height: MediaQuery.of(context).size.height * 0.03,
-                    width: MediaQuery.of(context).size.width * 0.8,
-                    child: Text(
-                      'Government Polytechnic ',
-                      style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                          fontSize: MediaQuery.of(context).size.height * 0.028),
-                    ),
+                ),
+                SizedBox(
+                  width: MediaQuery.of(context).size.width * 0.3,
+                ),
+                Container(
+                  alignment: Alignment.center,
+                  height: MediaQuery.of(context).size.height * 0.07,
+                  width: MediaQuery.of(context).size.width * 0.5  ,
+                  child: Text(
+                    'Mumbai',
+                    style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: MediaQuery.of(context).size.height * 0.028),
                   ),
-                ],
-              ),
-              Row(
-                children: [
-                  SizedBox(
-                    width: MediaQuery.of(context).size.width * 0.38,
-                  ),
-                  Container(
-                    height: MediaQuery.of(context).size.height * 0.05,
-                    width: MediaQuery.of(context).size.width * 0.24,
-                    child: Text(
-                      'Mumbai',
-                      style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                          fontSize: MediaQuery.of(context).size.height * 0.028),
-                    ),
-                  ),
-                ],
-              ),
-              SizedBox(
-                height: MediaQuery.of(context).size.height * 0.05,
-              ),
-              Container(
-                height: MediaQuery.of(context).size.height * 0.45,
-                width: MediaQuery.of(context).size.width * 0.8,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(30),
-                    color: AppColors.rectanglebox,
-                    border: Border.all(width: 2, color: Colors.blue)),
-                child: Column(
-                  children: [
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.02,
-                    ),
-                    Container(
-                      child: Text(
-                        'Welcome back',
-                        style: TextStyle(
-                            fontFamily: 'Arvo',
-                            fontSize: MediaQuery.of(context).size.height * 0.03,
-                            fontWeight: FontWeight.w900),
+                ),
+                SizedBox(
+                  height: MediaQuery.of(context).size.height * 0.0,
+                ),
+                Container(
+                  height: MediaQuery.of(context).size.height * 0.6,
+                  width: MediaQuery.of(context).size.width * 0.8,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(30),
+                      color: AppColors.rectanglebox,
+                      border: Border.all(width: 2, color: Colors.blue)),
+                  child: Column(
+                    children: [
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height * 0.02,
                       ),
-                    ),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.03,
-                    ),
-                    Container(
-                      width: MediaQuery.of(context).size.width * 0.6,
-                      child: TextField(
-                        controller: year,
-                        //   obscureText: true,
-                        decoration: const InputDecoration(
-                            hintText: 'Enter in uppercase',
-                            labelText: 'Year ',
-                            fillColor: Colors.white,
-                            filled: true,
-                            labelStyle: TextStyle(color: Colors.black),
-                            floatingLabelBehavior: FloatingLabelBehavior.always,
-                            contentPadding: EdgeInsets.symmetric(
-                                vertical: 10, horizontal: 16),
-                            border: OutlineInputBorder(),
-                            enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                              color: Colors.blueAccent,
-                              width: 2,
-                            )),
-                            focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                    color: Colors.deepPurple, width: 2))),
-                      ),
-                    ),
-                    Container(
-                      height: MediaQuery.of(context).size.height * 0.02,
-                      child: Text("Enter your year and shift"),
-                    ),
-                    SizedBox(height: MediaQuery.of(context).size.height * 0.02),
-                    Container(
-                      width: MediaQuery.of(context).size.width * 0.6,
-                      child: TextField(
-                        controller: Username,
-                        decoration: const InputDecoration(
-                            hintText: 'Enrollment No',
-                            labelText: 'Enrollment no ',
-                            fillColor: Colors.white,
-                            filled: true,
-                            labelStyle: TextStyle(color: Colors.black),
-                            floatingLabelBehavior: FloatingLabelBehavior.always,
-                            contentPadding: EdgeInsets.symmetric(
-                                vertical: 10, horizontal: 16),
-                            border: OutlineInputBorder(),
-                            enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                              color: Colors.blueAccent,
-                              width: 2,
-                            )),
-                            focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                    color: Colors.deepPurple, width: 2))),
-                      ),
-                    ),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.03,
-                    ),
-                    Container(
-                      width: MediaQuery.of(context).size.width * 0.6,
-                      child: TextField(
-                        controller: Password,
-                        //   obscureText: true,
-                        decoration: const InputDecoration(
-                            hintText: 'Password',
-                            labelText: 'Password ',
-                            fillColor: Colors.white,
-                            filled: true,
-                            labelStyle: TextStyle(color: Colors.black),
-                            floatingLabelBehavior: FloatingLabelBehavior.always,
-                            contentPadding: EdgeInsets.symmetric(
-                                vertical: 10, horizontal: 16),
-                            border: OutlineInputBorder(),
-                            enabledBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                              color: Colors.blueAccent,
-                              width: 2,
-                            )),
-                            focusedBorder: OutlineInputBorder(
-                                borderSide: BorderSide(
-                                    color: Colors.deepPurple, width: 2))),
-                      ),
-                    ),
-                    SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.04,
-                    ),
-                    Container(
-                      height: MediaQuery.of(context).size.height * 0.05,
-                      width: MediaQuery.of(context).size.width * 0.3,
-                      child: ElevatedButton(
-                        onPressed: choosinguserforauthprocess,
+                      Container(
                         child: Text(
-                          'Login',
+                          'Welcome back',
                           style: TextStyle(
-                            fontSize: MediaQuery.of(context).size.height * 0.02,
-                          ),
+                              fontFamily: 'Arvo',
+                              fontSize: MediaQuery.of(context).size.height * 0.03,
+                              fontWeight: FontWeight.w900),
                         ),
-                        style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.blueAccent,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30))),
                       ),
-                    )
-                  ],
-                ),
-              )
-            ],
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height * 0.03,
+                      ),
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.6,
+                        child: TextField(
+                          controller: year,
+                          //   obscureText: true,
+                          decoration: const InputDecoration(
+                              hintText: 'Enter in uppercase',
+                              labelText: 'Year ',
+                              fillColor: Colors.white,
+                              filled: true,
+                              labelStyle: TextStyle(color: Colors.black),
+                              floatingLabelBehavior: FloatingLabelBehavior.always,
+                              contentPadding: EdgeInsets.symmetric(
+                                  vertical: 10, horizontal: 16),
+                              border: OutlineInputBorder(),
+                              enabledBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                color: Colors.blueAccent,
+                                width: 2,
+                              )),
+                              focusedBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                      color: Colors.deepPurple, width: 2))),
+                        ),
+                      ),
+                      // Container(
+                      //   height: MediaQuery.of(context).size.height * 0.02,
+                      //   child: Text("Enter your year and shift"),
+                      // ),
+                      SizedBox(height: MediaQuery.of(context).size.height * 0.03),
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.6,
+                        child: TextField(
+                          controller: shift,
+                          decoration: const InputDecoration(
+                              hintText: 'Enter in Uppercase',
+                              labelText: 'SHIFT',
+                              fillColor: Colors.white,
+                              filled: true,
+                              labelStyle: TextStyle(color: Colors.black),
+                              floatingLabelBehavior: FloatingLabelBehavior.always,
+                              contentPadding: EdgeInsets.symmetric(
+                                  vertical: 10, horizontal: 16),
+                              border: OutlineInputBorder(),
+                              enabledBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                    color: Colors.blueAccent,
+                                    width: 2,
+                                  )),
+                              focusedBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                      color: Colors.deepPurple, width: 2))),
+                        ),
+                      ),
+                       SizedBox(height: MediaQuery.of(context).size.height * 0.03),
+
+
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.6,
+                        child: TextField(
+                          controller: Username,
+                          decoration: const InputDecoration(
+                              hintText: 'Enrollment No',
+                              labelText: 'Enrollment no ',
+                              fillColor: Colors.white,
+                              filled: true,
+                              labelStyle: TextStyle(color: Colors.black),
+                              floatingLabelBehavior: FloatingLabelBehavior.always,
+                              contentPadding: EdgeInsets.symmetric(
+                                  vertical: 10, horizontal: 16),
+                              border: OutlineInputBorder(),
+                              enabledBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                color: Colors.blueAccent,
+                                width: 2,
+                              )),
+                              focusedBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                      color: Colors.deepPurple, width: 2))),
+                        ),
+                      ),
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height * 0.03,
+                      ),
+                      Container(
+                        width: MediaQuery.of(context).size.width * 0.6,
+                        child: TextField(
+                          controller: Password,
+                          //   obscureText: true,
+                          decoration: const InputDecoration(
+                              hintText: 'Password',
+                              labelText: 'Password ',
+                              fillColor: Colors.white,
+                              filled: true,
+                              labelStyle: TextStyle(color: Colors.black),
+                              floatingLabelBehavior: FloatingLabelBehavior.always,
+                              contentPadding: EdgeInsets.symmetric(
+                                  vertical: 10, horizontal: 16),
+                              border: OutlineInputBorder(),
+                              enabledBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                color: Colors.blueAccent,
+                                width: 2,
+                              )),
+                              focusedBorder: OutlineInputBorder(
+                                  borderSide: BorderSide(
+                                      color: Colors.deepPurple, width: 2))),
+                        ),
+                      ),
+                      SizedBox(
+                        height: MediaQuery.of(context).size.height * 0.03,
+                      ),
+                      Container(
+                        height: MediaQuery.of(context).size.height * 0.05,
+                        width: MediaQuery.of(context).size.width * 0.4,
+                        child: ElevatedButton(
+                          onPressed: (){
+                            choosinguserforauthprocess();
+
+                          },
+                          child: Text(
+                            'Login',
+                            style: TextStyle(
+                              fontSize: MediaQuery.of(context).size.height * 0.02,
+                            ),
+                          ),
+                          style: ElevatedButton.styleFrom(
+                              backgroundColor: Colors.blueAccent,
+                              shape: RoundedRectangleBorder(
+                                  borderRadius: BorderRadius.circular(30))),
+                        ),
+                      )
+                    ],
+                  ),
+                )
+              ],
+            ),
           ),
         ));
   }
 
   Future<void> loginUse1() async {
+    String? year_shift=year.text+shift.text;
+
+
+    print(year_shift);
     try {
       String? enteredUsername = Username.text;
       String? enteredPassword = Password.text;
-      String? year1=year.text;
+
+
+
+
 
       DatabaseReference databaseReference = FirebaseDatabase.instance
           .reference()
@@ -283,8 +330,7 @@ class _loginpageState extends State<loginpage> {
         if (enteredPassword == storedPassword) {
           // Password matches, perform the necessary actions (e.g., navigate to the next screen).
           toast();
-          Navigator.pushReplacementNamed(context, 'NAVPAGE',
-              arguments: year1);
+          Navigator.pushReplacementNamed(context, 'NAVPAGE',arguments: year_shift);
         } else {
           // Incorrect password. Display an error message or perform appropriate handling.
           toast2();
@@ -300,6 +346,7 @@ class _loginpageState extends State<loginpage> {
   }
 
   Future<void> loginUse2() async {
+    String? year_shift=year.text+shift.text;
     try {
       String? enteredUsername = Username.text;
       String? enteredPassword = Password.text;
@@ -323,8 +370,7 @@ class _loginpageState extends State<loginpage> {
         if (enteredPassword == storedPassword) {
           // Password matches, perform the necessary actions (e.g., navigate to the next screen).
           toast();
-          Navigator.pushReplacementNamed(context, 'NAVPAGE',
-              arguments: year1);
+          Navigator.pushReplacementNamed(context, 'NAVPAGE', arguments: year_shift );
         } else {
           // Incorrect password. Display an error message or perform appropriate handling.
           toast2();
@@ -340,12 +386,11 @@ class _loginpageState extends State<loginpage> {
   }
 
   Future<void> loginUse3() async {
+
     try {
       String? enteredUsername = Username.text;
       String? enteredPassword = Password.text;
-      String? year1=year.text;
-      String? shift="FS"  ;
-      String? year2="FY";
+      String? year_shift=year.text+shift.text;
 
       DatabaseReference databaseReference = FirebaseDatabase.instance
           .reference()
@@ -365,8 +410,8 @@ class _loginpageState extends State<loginpage> {
         if (enteredPassword == storedPassword) {
           // Password matches, perform the necessary actions (e.g., navigate to the next screen).
           toast();
-          Navigator.pushReplacementNamed(context, 'NAVPAGE',
-              arguments: year1);
+          Navigator.pushReplacementNamed(context, 'NAVPAGE',arguments: year_shift
+               );
         } else {
           // Incorrect password. Display an error message or perform appropriate handling.
           toast2();
@@ -382,10 +427,11 @@ class _loginpageState extends State<loginpage> {
   }
 
   Future<void> loginUse4() async {
+    String? year_shift=year.text+shift.text;
     try {
       String? enteredUsername = Username.text;
       String? enteredPassword = Password.text;
-      String? year1=year.text;
+
 
       DatabaseReference databaseReference = FirebaseDatabase.instance
           .reference()
@@ -405,8 +451,7 @@ class _loginpageState extends State<loginpage> {
         if (enteredPassword == storedPassword) {
           // Password matches, perform the necessary actions (e.g., navigate to the next screen).
           toast();
-          Navigator.pushReplacementNamed(context, 'NAVPAGE',
-              arguments: year1);
+          Navigator.pushReplacementNamed(context, 'NAVPAGE',arguments: year_shift);
         } else {
           // Incorrect password. Display an error message or perform appropriate handling.
           toast2();
@@ -422,10 +467,10 @@ class _loginpageState extends State<loginpage> {
   }
 
   Future<void> loginUse5() async {
+    String? year_shift=year.text+shift.text;
     try {
       String? enteredUsername = Username.text;
       String? enteredPassword = Password.text;
-      String? year1=year.text;
 
       DatabaseReference databaseReference = FirebaseDatabase.instance
           .reference()
@@ -445,8 +490,7 @@ class _loginpageState extends State<loginpage> {
         if (enteredPassword == storedPassword) {
           // Password matches, perform the necessary actions (e.g., navigate to the next screen).
           toast();
-          Navigator.pushReplacementNamed(context, 'NAVPAGE',
-              arguments: year1);
+          Navigator.pushReplacementNamed(context, 'NAVPAGE',arguments: year_shift);
         } else {
           // Incorrect password. Display an error message or perform appropriate handling.
           toast2();
@@ -462,10 +506,11 @@ class _loginpageState extends State<loginpage> {
   }
 
   Future<void> loginUse6() async {
+    String? year_shift=year.text+shift.text;
     try {
       String? enteredUsername = Username.text;
       String? enteredPassword = Password.text;
-      String? year1=year.text;
+
 
 
       DatabaseReference databaseReference = FirebaseDatabase.instance
@@ -486,8 +531,8 @@ class _loginpageState extends State<loginpage> {
         if (enteredPassword == storedPassword) {
           // Password matches, perform the necessary actions (e.g., navigate to the next screen).
           toast();
-          Navigator.pushReplacementNamed(context, 'NAVPAGE',
-              arguments: year1);
+          Navigator.pushReplacementNamed(context, 'NAVPAGE',arguments: year_shift
+               );
         } else {
           // Incorrect password. Display an error message or perform appropriate handling.
           toast2();

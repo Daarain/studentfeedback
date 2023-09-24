@@ -1,6 +1,8 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:studentfeedback/dataprovider.dart';
 
 import '../AppColors.dart';
 
@@ -14,6 +16,12 @@ class homepage_2ndsem extends StatefulWidget {
 class _homepage_2ndsemState extends State<homepage_2ndsem> {
   @override
   Widget build(BuildContext context) {
+
+    final dataprovider1=Provider.of<dataprovider>(context);
+    final username=dataprovider1.Username1;
+    final password=dataprovider1.Password1;
+    final shift=dataprovider1.Shift;
+    final year=dataprovider1.Year;
     return Scaffold(
       backgroundColor: Colors.blue,
       appBar: AppBar(

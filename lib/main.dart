@@ -1,12 +1,18 @@
+
+
+
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
-import 'package:studentfeedback/About%20us.dart';
-import 'package:studentfeedback/NAV_PAGE.dart';
-import 'package:studentfeedback/Select_Sem.dart';
+import 'package:provider/provider.dart';
+
+import 'package:studentfeedback/dataprovider.dart';
 import 'package:studentfeedback/firebase_options.dart';
 
 import 'package:studentfeedback/Form.dart';
+import 'package:studentfeedback/intropages/About%20us.dart';
+import 'package:studentfeedback/intropages/NAV_PAGE.dart';
+import 'package:studentfeedback/intropages/Select_Sem.dart';
 import 'package:studentfeedback/loginpage.dart';
 import 'package:studentfeedback/select_subjects_screens/homepage_1stsem.dart';
 import 'package:studentfeedback/select_subjects_screens/homepage_2ndsem.dart';
@@ -22,7 +28,12 @@ void main() async {
 
 
   );
-  runApp(const Myapp());
+  runApp(
+ChangeNotifierProvider(create: (context)=>dataprovider(),
+child: Myapp(),),
+
+    
+  );
 }
 
 class Myapp extends StatefulWidget {

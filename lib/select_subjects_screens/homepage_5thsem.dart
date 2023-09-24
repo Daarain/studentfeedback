@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:studentfeedback/AppColors.dart';
+import 'package:studentfeedback/dataprovider.dart';
 
 
 
@@ -11,8 +13,15 @@ class homepage_5thsem extends StatefulWidget {
 }
 
 class _homepageState extends State<homepage_5thsem> {
+
   @override
   Widget build(BuildContext context) {
+    final String year_shift= ModalRoute.of(context)!.settings.arguments as String;
+    final dataprovider1=Provider.of<dataprovider>(context);
+    final username=dataprovider1.Username1;
+    final password=dataprovider1.Password1;
+    final shift=dataprovider1.Shift;
+    final year=dataprovider1.Year;
        return Scaffold(
       backgroundColor: Colors.blue,
       appBar: AppBar(
