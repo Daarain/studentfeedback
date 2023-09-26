@@ -91,7 +91,7 @@ class _homepage_1stsemState extends State<homepage_1stsem> {
                       width: MediaQuery.of(context).size.width * 0.9,
                       child: ElevatedButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, 'Form1');
+                          Navigator.pushNamed(context, 'appliedphysicsform');
                         },
                         child: Row(
                           children: [
@@ -124,7 +124,7 @@ class _homepage_1stsemState extends State<homepage_1stsem> {
                       width: MediaQuery.of(context).size.width * 0.9,
                       child: ElevatedButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, 'Form1');
+                          Navigator.pushNamed(context, 'basicmathemathicsform');
                         },
                         child: Row(
                           children: [

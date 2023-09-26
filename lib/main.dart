@@ -6,10 +6,13 @@ import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
+
 import 'package:studentfeedback/dataprovider.dart';
 import 'package:studentfeedback/firebase_options.dart';
+import 'package:studentfeedback/forms/appliedphysicsform.dart';
+import 'package:studentfeedback/forms/basicmathemathicsform.dart';
 
-import 'package:studentfeedback/Form.dart';
+
 import 'package:studentfeedback/intropages/About%20us.dart';
 import 'package:studentfeedback/intropages/NAV_PAGE.dart';
 import 'package:studentfeedback/intropages/Select_Sem.dart';
@@ -57,13 +60,15 @@ class _MyappState extends State<Myapp> {
            'Select_Sem':(context)=>Select_Sem(),
           'NAVPAGE':(context)=> NAV_PAGE(),
           'Aboutus':(context)=>Aboutus(),
-          'Form1' :(context) => Form1(),
+
           'homepage_5thsem': (context) => homepage_5thsem(),
           'homepage_6thsem': (context) => homepage_6thsem(),
           'homepage_3rdsem': (context) => homepage_3rdsem(),
           'homepage_2ndsem': (context) => homepage_2ndsem(),
           'homepage_4thsem': (context) => homepage_4thsem(),
           'homepage_1stsem': (context) => homepage_1stsem(),
+          'appliedphysicsform' :(context) => appliedphysicsform(),
+          'basicmathemathicsform':(context)=>basicmathemathicsform()
         });
   }
 }
