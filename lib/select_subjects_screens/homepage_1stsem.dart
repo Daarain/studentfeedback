@@ -157,7 +157,7 @@ class _homepage_1stsemState extends State<homepage_1stsem> {
                       width: MediaQuery.of(context).size.width * 0.9,
                       child: ElevatedButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, "Form1");
+                          Navigator.pushNamed(context, "beeeform");
                         },
                         child: Row(
                           children: [
@@ -190,7 +190,7 @@ class _homepage_1stsemState extends State<homepage_1stsem> {
                       width: MediaQuery.of(context).size.width * 0.9,
                       child: ElevatedButton(
                         onPressed: () {
-                          Navigator.pushNamed(context, "Form1");
+                          Navigator.pushNamed(context, "cform");
                         },
                         child: Row(
                           children: [
@@ -222,7 +222,7 @@ class _homepage_1stsemState extends State<homepage_1stsem> {
                       height: MediaQuery.of(context).size.height * 0.05,
                       width: MediaQuery.of(context).size.width * 0.9,
                       child: ElevatedButton(
-                        onPressed: () { Navigator.pushNamed(context, "Form1");},
+                        onPressed: () { Navigator.pushNamed(context, "wpdform");},
                         child: Row(
                           children: [
                             Expanded(
@@ -253,7 +253,7 @@ class _homepage_1stsemState extends State<homepage_1stsem> {
                       height: MediaQuery.of(context).size.height * 0.05,
                       width: MediaQuery.of(context).size.width * 0.9,
                       child: ElevatedButton(
-                        onPressed: () { Navigator.pushNamed(context, "Form1");},
+                        onPressed: () { Navigator.pushNamed(context, "mvcform");},
                         child: Row(
                           children: [
                             Expanded(

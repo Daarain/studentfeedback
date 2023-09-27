@@ -9,8 +9,12 @@ import 'package:provider/provider.dart';
 
 import 'package:studentfeedback/dataprovider.dart';
 import 'package:studentfeedback/firebase_options.dart';
-import 'package:studentfeedback/forms/appliedphysicsform.dart';
-import 'package:studentfeedback/forms/basicmathemathicsform.dart';
+import 'package:studentfeedback/forms/1semforms/appliedphysicsform.dart';
+import 'package:studentfeedback/forms/1semforms/basicmathemathicsform.dart';
+import 'package:studentfeedback/forms/1semforms/beeeform.dart';
+import 'package:studentfeedback/forms/1semforms/cform.dart';
+import 'package:studentfeedback/forms/1semforms/mvcform.dart';
+import 'package:studentfeedback/forms/1semforms/wpdform.dart';
 
 
 import 'package:studentfeedback/intropages/About%20us.dart';
@@ -56,19 +60,30 @@ class _MyappState extends State<Myapp> {
         debugShowCheckedModeBanner: false,
         initialRoute: 'login_page',
         routes: {
+          //auth page
           'login_page': (context) => loginpage(),
+
+          //nav pages
            'Select_Sem':(context)=>Select_Sem(),
           'NAVPAGE':(context)=> NAV_PAGE(),
           'Aboutus':(context)=>Aboutus(),
-
+          //homepages which are used for navigating through form pages
           'homepage_5thsem': (context) => homepage_5thsem(),
           'homepage_6thsem': (context) => homepage_6thsem(),
           'homepage_3rdsem': (context) => homepage_3rdsem(),
           'homepage_2ndsem': (context) => homepage_2ndsem(),
           'homepage_4thsem': (context) => homepage_4thsem(),
           'homepage_1stsem': (context) => homepage_1stsem(),
+
+          //1st sem forms for filling the feedback
           'appliedphysicsform' :(context) => appliedphysicsform(),
-          'basicmathemathicsform':(context)=>basicmathemathicsform()
+          'basicmathemathicsform':(context)=>basicmathemathicsform(),
+          'beeeform':(context)=>beeeform(),
+          'cform':(context)=>cform(),
+          'wpdform':(context)=>wpdform(),
+          'mvcform':(context)=>mvcform()
+
+          //2nd sem forms for filling the feedbacks
         });
   }
 }
