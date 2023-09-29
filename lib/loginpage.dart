@@ -87,9 +87,9 @@ class _loginpageState extends State<loginpage> {
             padding: EdgeInsets.all(MediaQuery.of(context).size.width*0.06),
             child: Column(
               children: [
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.04,
-                ),
+                // SizedBox(
+                //   height: MediaQuery.of(context).size.height * 0.04,
+                // ),
                 Container(
                   height: MediaQuery.of(context).size.height * 0.25,
                   // color: Colors.blue,
@@ -136,7 +136,7 @@ class _loginpageState extends State<loginpage> {
                 ),
                 Container(
                   height: MediaQuery.of(context).size.height * 0.6,
-                  width: MediaQuery.of(context).size.width * 0.8,
+                  width: MediaQuery.of(context).size.width * 0.9,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
                       color: AppColors.rectanglebox,
@@ -144,7 +144,7 @@ class _loginpageState extends State<loginpage> {
                   child: Column(
                     children: [
                       SizedBox(
-                        height: MediaQuery.of(context).size.height * 0.02,
+                        height: MediaQuery.of(context).size.height * 0.04,
                       ),
                       Container(
                         child: Text(
@@ -159,7 +159,7 @@ class _loginpageState extends State<loginpage> {
                         height: MediaQuery.of(context).size.height * 0.03,
                       ),
                       Container(
-                        width: MediaQuery.of(context).size.width * 0.6,
+                        width: MediaQuery.of(context).size.width * 0.7,
                         child: TextField(
                           controller: year,
                           //   obscureText: true,
@@ -189,7 +189,7 @@ class _loginpageState extends State<loginpage> {
                       // ),
                       SizedBox(height: MediaQuery.of(context).size.height * 0.03),
                       Container(
-                        width: MediaQuery.of(context).size.width * 0.6,
+                        width: MediaQuery.of(context).size.width * 0.7,
                         child: TextField(
                           controller: shift,
                           decoration: const InputDecoration(
@@ -216,11 +216,11 @@ class _loginpageState extends State<loginpage> {
 
 
                       Container(
-                        width: MediaQuery.of(context).size.width * 0.6,
+                        width: MediaQuery.of(context).size.width * 0.7,
                         child: TextField(
                           controller: Username,
                           decoration: const InputDecoration(
-                              hintText: 'Enrollment No',
+                              hintText: 'Enter in Upper Case',
                               labelText: 'Enrollment no ',
                               fillColor: Colors.white,
                               filled: true,
@@ -243,13 +243,13 @@ class _loginpageState extends State<loginpage> {
                         height: MediaQuery.of(context).size.height * 0.03,
                       ),
                       Container(
-                        width: MediaQuery.of(context).size.width * 0.6,
+                        width: MediaQuery.of(context).size.width * 0.7,
                         child: TextField(
                           controller: Password,
                           //   obscureText: true,
                           decoration: const InputDecoration(
-                              hintText: 'Password',
-                              labelText: 'Password ',
+                              hintText: 'Enter in Upper Case',
+                              labelText: 'Password',
                               fillColor: Colors.white,
                               filled: true,
                               labelStyle: TextStyle(color: Colors.black),
@@ -268,7 +268,7 @@ class _loginpageState extends State<loginpage> {
                         ),
                       ),
                       SizedBox(
-                        height: MediaQuery.of(context).size.height * 0.03,
+                        height: MediaQuery.of(context).size.height * 0.05,
                       ),
                       Container(
                         height: MediaQuery.of(context).size.height * 0.05,
@@ -276,7 +276,6 @@ class _loginpageState extends State<loginpage> {
                         child: ElevatedButton(
                           onPressed: (){
                             choosinguserforauthprocess();
-
                           },
                           child: Text(
                             'Login',

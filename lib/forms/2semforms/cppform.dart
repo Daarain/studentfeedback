@@ -4,11 +4,11 @@ import 'package:provider/provider.dart';
 import 'package:studentfeedback/AppColors.dart';
 import 'package:studentfeedback/dataprovider.dart';
 
-class appliedphysicsform extends StatefulWidget {
-  const appliedphysicsform({super.key});
+class cppform extends StatefulWidget {
+  const cppform({super.key});
 
   @override
-  State<appliedphysicsform> createState() => _appliedphysicsform();
+  State<cppform> createState() => _cppform();
 }
 
 //THIS LIST IS USED FOR MANAGING THE OPTIONS SELECTED IN THE RADIO BUTTONS
@@ -40,14 +40,13 @@ TextEditingController c4 = new TextEditingController();
 TextEditingController c5 = new TextEditingController();
 TextEditingController c6 = new TextEditingController();
 
-class _appliedphysicsform extends State<appliedphysicsform> {
+class _cppform extends State<cppform> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.lightBlueAccent,
       appBar: AppBar(
-        title: Text(
-          "Applied Physics",
+        title: Text("Programming in C++",
           style: TextStyle(
               fontSize: MediaQuery.of(context).size.height * 0.03,
               color: Colors.black,
@@ -75,7 +74,7 @@ class _appliedphysicsform extends State<appliedphysicsform> {
                           "Faculty related response :- ",
                           style: TextStyle(
                               fontSize:
-                                  MediaQuery.of(context).size.width * 0.06,
+                              MediaQuery.of(context).size.width * 0.06,
                               fontWeight: FontWeight.bold),
                         ),
                       ),
@@ -94,12 +93,12 @@ class _appliedphysicsform extends State<appliedphysicsform> {
                             children: [
                               SizedBox(
                                 height:
-                                    MediaQuery.of(context).size.height * 0.009,
+                                MediaQuery.of(context).size.height * 0.009,
                               ),
                               Container(
                                 width: MediaQuery.of(context).size.width * 0.85,
                                 height:
-                                    MediaQuery.of(context).size.height * 0.033,
+                                MediaQuery.of(context).size.height * 0.03,
                                 alignment: Alignment.center,
                                 decoration: BoxDecoration(
                                     color: Colors.lightBlueAccent,
@@ -109,8 +108,8 @@ class _appliedphysicsform extends State<appliedphysicsform> {
                                   style: TextStyle(
                                       fontWeight: FontWeight.w600,
                                       fontSize:
-                                          MediaQuery.of(context).size.height *
-                                              0.018),
+                                      MediaQuery.of(context).size.height *
+                                          0.018),
                                 ),
                               ),
                               RadioListTile(
@@ -162,7 +161,7 @@ class _appliedphysicsform extends State<appliedphysicsform> {
                             children: [
                               SizedBox(
                                 height:
-                                    MediaQuery.of(context).size.height * 0.009,
+                                MediaQuery.of(context).size.height * 0.009,
                               ),
                               Container(
                                 alignment: Alignment.center,
@@ -170,7 +169,7 @@ class _appliedphysicsform extends State<appliedphysicsform> {
                                     MediaQuery.of(context).size.height * 0.01),
                                 width: MediaQuery.of(context).size.width * 0.85,
                                 height:
-                                    MediaQuery.of(context).size.height * 0.04,
+                                MediaQuery.of(context).size.height * 0.04,
                                 decoration: BoxDecoration(
                                     color: Colors.lightBlueAccent,
                                     borderRadius: BorderRadius.circular(20)),
@@ -179,8 +178,8 @@ class _appliedphysicsform extends State<appliedphysicsform> {
                                   style: TextStyle(
                                       fontWeight: FontWeight.w600,
                                       fontSize:
-                                          MediaQuery.of(context).size.height *
-                                              0.018),
+                                      MediaQuery.of(context).size.height *
+                                          0.018),
                                 ),
                               ),
                               RadioListTile(
@@ -232,7 +231,7 @@ class _appliedphysicsform extends State<appliedphysicsform> {
                             children: [
                               SizedBox(
                                 height:
-                                    MediaQuery.of(context).size.height * 0.009,
+                                MediaQuery.of(context).size.height * 0.009,
                               ),
                               Container(
                                 alignment: Alignment.center,
@@ -247,8 +246,8 @@ class _appliedphysicsform extends State<appliedphysicsform> {
                                   style: TextStyle(
                                       fontWeight: FontWeight.w600,
                                       fontSize:
-                                          MediaQuery.of(context).size.height *
-                                              0.018),
+                                      MediaQuery.of(context).size.height *
+                                          0.018),
                                 ),
                               ),
                               RadioListTile(
@@ -292,7 +291,7 @@ class _appliedphysicsform extends State<appliedphysicsform> {
                       children: [
                         Container(
                           width: MediaQuery.of(context).size.width * 0.9,
-                          height: MediaQuery.of(context).size.height * 0.3,
+                          height: MediaQuery.of(context).size.height * 0.27,
                           decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(20)),
@@ -300,7 +299,7 @@ class _appliedphysicsform extends State<appliedphysicsform> {
                             children: [
                               SizedBox(
                                 height:
-                                    MediaQuery.of(context).size.height * 0.009,
+                                MediaQuery.of(context).size.height * 0.009,
                               ),
                               Container(
                                 alignment: Alignment.center,
@@ -315,8 +314,8 @@ class _appliedphysicsform extends State<appliedphysicsform> {
                                   style: TextStyle(
                                       fontWeight: FontWeight.w600,
                                       fontSize:
-                                          MediaQuery.of(context).size.height *
-                                              0.018),
+                                      MediaQuery.of(context).size.height *
+                                          0.018),
                                 ),
                               ),
                               RadioListTile(
@@ -368,7 +367,7 @@ class _appliedphysicsform extends State<appliedphysicsform> {
                             children: [
                               SizedBox(
                                 height:
-                                    MediaQuery.of(context).size.height * 0.009,
+                                MediaQuery.of(context).size.height * 0.009,
                               ),
                               Container(
                                 width: MediaQuery.of(context).size.width * 0.85,
@@ -383,8 +382,8 @@ class _appliedphysicsform extends State<appliedphysicsform> {
                                   style: TextStyle(
                                       fontWeight: FontWeight.w600,
                                       fontSize:
-                                          MediaQuery.of(context).size.height *
-                                              0.02),
+                                      MediaQuery.of(context).size.height *
+                                          0.02),
                                 ),
                               ),
                               RadioListTile(
@@ -437,9 +436,9 @@ class _appliedphysicsform extends State<appliedphysicsform> {
                       padding: EdgeInsets.all(
                           MediaQuery.of(context).size.height * 0.01),
                       height: MediaQuery.of(context).size.height * 0.07,
-                      width: MediaQuery.of(context).size.width * 0.9,
+                      width: MediaQuery.of(context).size.width * 0.85,
                       child: Text(
-                        "Course Outcomes related :-",
+                        "Course Outcomes related :- ",
                         style: TextStyle(
                             fontSize: MediaQuery.of(context).size.width * 0.06,
                             fontWeight: FontWeight.bold),
@@ -471,8 +470,8 @@ class _appliedphysicsform extends State<appliedphysicsform> {
                                       "CO1:  ",
                                       style: TextStyle(
                                           fontSize: MediaQuery.of(context)
-                                                  .size
-                                                  .height *
+                                              .size
+                                              .height *
                                               0.02),
                                     ),
                                     Container(
@@ -487,19 +486,19 @@ class _appliedphysicsform extends State<appliedphysicsform> {
                                             fillColor: Colors.white,
                                             filled: true,
                                             labelStyle:
-                                                TextStyle(color: Colors.black),
+                                            TextStyle(color: Colors.black),
                                             floatingLabelBehavior:
-                                                FloatingLabelBehavior.always,
+                                            FloatingLabelBehavior.always,
                                             contentPadding:
-                                                EdgeInsets.symmetric(
-                                                    vertical: 10,
-                                                    horizontal: 16),
+                                            EdgeInsets.symmetric(
+                                                vertical: 10,
+                                                horizontal: 16),
                                             border: OutlineInputBorder(),
                                             enabledBorder: OutlineInputBorder(
                                                 borderSide: BorderSide(
-                                              color: Colors.blueAccent,
-                                              width: 2,
-                                            )),
+                                                  color: Colors.blueAccent,
+                                                  width: 2,
+                                                )),
                                             focusedBorder: OutlineInputBorder(
                                                 borderSide: BorderSide(
                                                     color: Colors.deepPurple,
@@ -567,8 +566,8 @@ class _appliedphysicsform extends State<appliedphysicsform> {
                                       "CO2:  ",
                                       style: TextStyle(
                                           fontSize: MediaQuery.of(context)
-                                                  .size
-                                                  .height *
+                                              .size
+                                              .height *
                                               0.02),
                                     ),
                                     Container(
@@ -583,19 +582,19 @@ class _appliedphysicsform extends State<appliedphysicsform> {
                                             fillColor: Colors.white,
                                             filled: true,
                                             labelStyle:
-                                                TextStyle(color: Colors.black),
+                                            TextStyle(color: Colors.black),
                                             floatingLabelBehavior:
-                                                FloatingLabelBehavior.always,
+                                            FloatingLabelBehavior.always,
                                             contentPadding:
-                                                EdgeInsets.symmetric(
-                                                    vertical: 10,
-                                                    horizontal: 16),
+                                            EdgeInsets.symmetric(
+                                                vertical: 10,
+                                                horizontal: 16),
                                             border: OutlineInputBorder(),
                                             enabledBorder: OutlineInputBorder(
                                                 borderSide: BorderSide(
-                                              color: Colors.blueAccent,
-                                              width: 2,
-                                            )),
+                                                  color: Colors.blueAccent,
+                                                  width: 2,
+                                                )),
                                             focusedBorder: OutlineInputBorder(
                                                 borderSide: BorderSide(
                                                     color: Colors.deepPurple,
@@ -663,8 +662,8 @@ class _appliedphysicsform extends State<appliedphysicsform> {
                                       "CO3:  ",
                                       style: TextStyle(
                                           fontSize: MediaQuery.of(context)
-                                                  .size
-                                                  .height *
+                                              .size
+                                              .height *
                                               0.02),
                                     ),
                                     Container(
@@ -679,19 +678,19 @@ class _appliedphysicsform extends State<appliedphysicsform> {
                                             fillColor: Colors.white,
                                             filled: true,
                                             labelStyle:
-                                                TextStyle(color: Colors.black),
+                                            TextStyle(color: Colors.black),
                                             floatingLabelBehavior:
-                                                FloatingLabelBehavior.always,
+                                            FloatingLabelBehavior.always,
                                             contentPadding:
-                                                EdgeInsets.symmetric(
-                                                    vertical: 10,
-                                                    horizontal: 16),
+                                            EdgeInsets.symmetric(
+                                                vertical: 10,
+                                                horizontal: 16),
                                             border: OutlineInputBorder(),
                                             enabledBorder: OutlineInputBorder(
                                                 borderSide: BorderSide(
-                                              color: Colors.blueAccent,
-                                              width: 2,
-                                            )),
+                                                  color: Colors.blueAccent,
+                                                  width: 2,
+                                                )),
                                             focusedBorder: OutlineInputBorder(
                                                 borderSide: BorderSide(
                                                     color: Colors.deepPurple,
@@ -759,8 +758,8 @@ class _appliedphysicsform extends State<appliedphysicsform> {
                                       "CO4:  ",
                                       style: TextStyle(
                                           fontSize: MediaQuery.of(context)
-                                                  .size
-                                                  .height *
+                                              .size
+                                              .height *
                                               0.02),
                                     ),
                                     Container(
@@ -775,19 +774,19 @@ class _appliedphysicsform extends State<appliedphysicsform> {
                                             fillColor: Colors.white,
                                             filled: true,
                                             labelStyle:
-                                                TextStyle(color: Colors.black),
+                                            TextStyle(color: Colors.black),
                                             floatingLabelBehavior:
-                                                FloatingLabelBehavior.always,
+                                            FloatingLabelBehavior.always,
                                             contentPadding:
-                                                EdgeInsets.symmetric(
-                                                    vertical: 10,
-                                                    horizontal: 16),
+                                            EdgeInsets.symmetric(
+                                                vertical: 10,
+                                                horizontal: 16),
                                             border: OutlineInputBorder(),
                                             enabledBorder: OutlineInputBorder(
                                                 borderSide: BorderSide(
-                                              color: Colors.blueAccent,
-                                              width: 2,
-                                            )),
+                                                  color: Colors.blueAccent,
+                                                  width: 2,
+                                                )),
                                             focusedBorder: OutlineInputBorder(
                                                 borderSide: BorderSide(
                                                     color: Colors.deepPurple,
@@ -855,8 +854,8 @@ class _appliedphysicsform extends State<appliedphysicsform> {
                                       "CO5:  ",
                                       style: TextStyle(
                                           fontSize: MediaQuery.of(context)
-                                                  .size
-                                                  .height *
+                                              .size
+                                              .height *
                                               0.02),
                                     ),
                                     Container(
@@ -871,19 +870,19 @@ class _appliedphysicsform extends State<appliedphysicsform> {
                                             fillColor: Colors.white,
                                             filled: true,
                                             labelStyle:
-                                                TextStyle(color: Colors.black),
+                                            TextStyle(color: Colors.black),
                                             floatingLabelBehavior:
-                                                FloatingLabelBehavior.always,
+                                            FloatingLabelBehavior.always,
                                             contentPadding:
-                                                EdgeInsets.symmetric(
-                                                    vertical: 10,
-                                                    horizontal: 16),
+                                            EdgeInsets.symmetric(
+                                                vertical: 10,
+                                                horizontal: 16),
                                             border: OutlineInputBorder(),
                                             enabledBorder: OutlineInputBorder(
                                                 borderSide: BorderSide(
-                                              color: Colors.blueAccent,
-                                              width: 2,
-                                            )),
+                                                  color: Colors.blueAccent,
+                                                  width: 2,
+                                                )),
                                             focusedBorder: OutlineInputBorder(
                                                 borderSide: BorderSide(
                                                     color: Colors.deepPurple,
@@ -951,8 +950,8 @@ class _appliedphysicsform extends State<appliedphysicsform> {
                                       "CO6:  ",
                                       style: TextStyle(
                                           fontSize: MediaQuery.of(context)
-                                                  .size
-                                                  .height *
+                                              .size
+                                              .height *
                                               0.02),
                                     ),
                                     Container(
@@ -967,19 +966,19 @@ class _appliedphysicsform extends State<appliedphysicsform> {
                                             fillColor: Colors.white,
                                             filled: true,
                                             labelStyle:
-                                                TextStyle(color: Colors.black),
+                                            TextStyle(color: Colors.black),
                                             floatingLabelBehavior:
-                                                FloatingLabelBehavior.always,
+                                            FloatingLabelBehavior.always,
                                             contentPadding:
-                                                EdgeInsets.symmetric(
-                                                    vertical: 10,
-                                                    horizontal: 16),
+                                            EdgeInsets.symmetric(
+                                                vertical: 10,
+                                                horizontal: 16),
                                             border: OutlineInputBorder(),
                                             enabledBorder: OutlineInputBorder(
                                                 borderSide: BorderSide(
-                                              color: Colors.blueAccent,
-                                              width: 2,
-                                            )),
+                                                  color: Colors.blueAccent,
+                                                  width: 2,
+                                                )),
                                             focusedBorder: OutlineInputBorder(
                                                 borderSide: BorderSide(
                                                     color: Colors.deepPurple,
@@ -1037,13 +1036,13 @@ class _appliedphysicsform extends State<appliedphysicsform> {
                           // color: Colors.yellow,
                           padding: EdgeInsets.all(
                               MediaQuery.of(context).size.height * 0.01),
-                          height: MediaQuery.of(context).size.height * 0.08,
+                          height: MediaQuery.of(context).size.height * 0.07,
                           width: MediaQuery.of(context).size.width * 0.9,
                           child: Text(
                             "Facilities in the department:-",
                             style: TextStyle(
                                 fontSize:
-                                    MediaQuery.of(context).size.width * 0.06,
+                                MediaQuery.of(context).size.width * 0.06,
                                 fontWeight: FontWeight.bold),
                           ),
                         ),
@@ -1069,9 +1068,9 @@ class _appliedphysicsform extends State<appliedphysicsform> {
                                 ),
                                 Container(
                                   width:
-                                      MediaQuery.of(context).size.width * 0.85,
+                                  MediaQuery.of(context).size.width * 0.85,
                                   height:
-                                      MediaQuery.of(context).size.height * 0.04,
+                                  MediaQuery.of(context).size.height * 0.04,
                                   alignment: Alignment.center,
                                   decoration: BoxDecoration(
                                       color: Colors.lightBlueAccent,
@@ -1081,8 +1080,8 @@ class _appliedphysicsform extends State<appliedphysicsform> {
                                     style: TextStyle(
                                         fontWeight: FontWeight.w600,
                                         fontSize:
-                                            MediaQuery.of(context).size.height *
-                                                0.018),
+                                        MediaQuery.of(context).size.height *
+                                            0.018),
                                   ),
                                 ),
                                 RadioListTile(
@@ -1138,9 +1137,9 @@ class _appliedphysicsform extends State<appliedphysicsform> {
                                 ),
                                 Container(
                                   width:
-                                      MediaQuery.of(context).size.width * 0.85,
+                                  MediaQuery.of(context).size.width * 0.85,
                                   height:
-                                      MediaQuery.of(context).size.height * 0.04,
+                                  MediaQuery.of(context).size.height * 0.04,
                                   alignment: Alignment.center,
                                   decoration: BoxDecoration(
                                       color: Colors.lightBlueAccent,
@@ -1150,8 +1149,8 @@ class _appliedphysicsform extends State<appliedphysicsform> {
                                     style: TextStyle(
                                         fontWeight: FontWeight.w600,
                                         fontSize:
-                                            MediaQuery.of(context).size.height *
-                                                0.018),
+                                        MediaQuery.of(context).size.height *
+                                            0.018),
                                   ),
                                 ),
                                 RadioListTile(
@@ -1195,7 +1194,7 @@ class _appliedphysicsform extends State<appliedphysicsform> {
                   height: MediaQuery.of(context).size.height * 0.05,
                   width: MediaQuery.of(context).size.width * 0.85,
                   decoration:
-                      BoxDecoration(borderRadius: BorderRadius.circular(20)),
+                  BoxDecoration(borderRadius: BorderRadius.circular(20)),
                   child: ElevatedButton(
                     onPressed: () {
                       writeCRtodb();
@@ -1237,8 +1236,8 @@ class _appliedphysicsform extends State<appliedphysicsform> {
           .child(shift)
           .child(username1)
           .child('greviances')
-          .child('grevianceofsem1')
-          .child('appliedphysics')
+          .child('grevianceofsem2')
+          .child('programminginc++')
           .child('courseoutcomesrelated')
           .child('cranswer1');
 
@@ -1250,8 +1249,8 @@ class _appliedphysicsform extends State<appliedphysicsform> {
           .child(shift)
           .child(username1)
           .child('greviances')
-          .child('grevianceofsem1')
-          .child('appliedphysics')
+          .child('grevianceofsem2')
+          .child('programminginc++')
           .child('courseoutcomesrelated')
           .child('cranswer2');
       DatabaseReference dbref3 = FirebaseDatabase.instance
@@ -1262,8 +1261,8 @@ class _appliedphysicsform extends State<appliedphysicsform> {
           .child(shift)
           .child(username1)
           .child('greviances')
-          .child('grevianceofsem1')
-          .child('appliedphysics')
+          .child('grevianceofsem2')
+          .child('programminginc++')
           .child('courseoutcomesrelated')
           .child('cranswer3');
       DatabaseReference dbref4 = FirebaseDatabase.instance
@@ -1274,8 +1273,8 @@ class _appliedphysicsform extends State<appliedphysicsform> {
           .child(shift)
           .child(username1)
           .child('greviances')
-          .child('grevianceofsem1')
-          .child('appliedphysics')
+          .child('grevianceofsem2')
+          .child('programminginc++')
           .child('courseoutcomesrelated')
           .child('cranswer4');
       DatabaseReference dbref5 = FirebaseDatabase.instance
@@ -1286,8 +1285,8 @@ class _appliedphysicsform extends State<appliedphysicsform> {
           .child(shift)
           .child(username1)
           .child('greviances')
-          .child('grevianceofsem1')
-          .child('appliedphysics')
+          .child('grevianceofsem2')
+          .child('programminginc++')
           .child('courseoutcomesrelated')
           .child('cranswer5');
       DatabaseReference dbref6 = FirebaseDatabase.instance
@@ -1298,8 +1297,8 @@ class _appliedphysicsform extends State<appliedphysicsform> {
           .child(shift)
           .child(username1)
           .child('greviances')
-          .child('grevianceofsem1')
-          .child('appliedphysics')
+          .child('grevianceofsem2')
+          .child('programminginc++')
           .child('courseoutcomesrelated')
           .child('cranswer6');
 
@@ -1379,8 +1378,8 @@ class _appliedphysicsform extends State<appliedphysicsform> {
           .child(shift)
           .child(username1)
           .child('greviances')
-          .child('grevianceofsem1')
-          .child('appliedphysics')
+          .child('grevianceofsem2')
+          .child('programminginc++')
           .child('facilityrelated');
 
       Map<String, dynamic> facdata = {
@@ -1414,8 +1413,8 @@ class _appliedphysicsform extends State<appliedphysicsform> {
           .child(shift)
           .child(username1)
           .child('greviances')
-          .child('grevianceofsem1')
-          .child('appliedphysics')
+          .child('grevianceofsem2')
+          .child('programminginc++')
           .child('facultyrelated');
 
       Map<String, dynamic> frdata = {

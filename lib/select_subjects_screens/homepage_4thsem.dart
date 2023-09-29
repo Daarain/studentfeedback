@@ -29,7 +29,7 @@ class _homepage_4thsemState extends State<homepage_4thsem> {
           ' 2nd Sem Grievances',
           style: TextStyle(color: AppColors.text,
               fontWeight: FontWeight.bold,
-              fontSize: 30),
+              fontSize: MediaQuery.of(context).size.width*0.07),
         ),
         centerTitle: true,
 
@@ -60,24 +60,20 @@ class _homepage_4thsemState extends State<homepage_4thsem> {
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.06,
                   ),
-                  Row(children: [
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.23,
-                    ),
-                    Container(
+
+                  Center(
+                    child: Container(
 
                       child: Text(
                         'Select subject',
                         style: TextStyle(
                             color: AppColors.headingtext3,
                             fontWeight: FontWeight.w900,
-                            fontSize: 34),
+                            fontSize: MediaQuery.of(context).size.height*0.05),
                       ),
                     ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.23,
-                    ),
-                  ]),
+                  ),
+
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.06,
                   ),
@@ -93,7 +89,7 @@ class _homepage_4thsemState extends State<homepage_4thsem> {
                                   'Operating System ',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w500,
-                                      fontSize: 16,
+                                      fontSize: MediaQuery.of(context).size.height*0.02,
                                       color: AppColors.text),
                                 )),
                             Container(
@@ -124,7 +120,7 @@ class _homepage_4thsemState extends State<homepage_4thsem> {
                                   'Software Engineering',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w500,
-                                      fontSize: 16,
+                                      fontSize: MediaQuery.of(context).size.height*0.02,
                                       color: AppColors.text),
                                 )),
                             Container(
@@ -155,7 +151,7 @@ class _homepage_4thsemState extends State<homepage_4thsem> {
                                   'Advanced Programming in Java ',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w500,
-                                      fontSize: 16,
+                                      fontSize: MediaQuery.of(context).size.height*0.02,
                                       color: AppColors.text),
                                 )),
                             Container(
@@ -186,7 +182,7 @@ class _homepage_4thsemState extends State<homepage_4thsem> {
                                   'Mobile Application Development ',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w500,
-                                      fontSize: 16,
+                                      fontSize: MediaQuery.of(context).size.height*0.02,
                                       color: AppColors.text),
                                 )),
                             Container(
@@ -217,7 +213,7 @@ class _homepage_4thsemState extends State<homepage_4thsem> {
                                   'Next Generation Databases',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w500,
-                                      fontSize: 16,
+                                      fontSize: MediaQuery.of(context).size.height*0.02,
                                       color:AppColors.text),
                                 )),
                             Container(
@@ -248,7 +244,7 @@ class _homepage_4thsemState extends State<homepage_4thsem> {
                                   'Next Generation Databases',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w500,
-                                      fontSize: 16,
+                                      fontSize: MediaQuery.of(context).size.height*0.02,
                                       color:AppColors.text),
                                 )),
                             Container(
@@ -278,7 +274,7 @@ class _homepage_4thsemState extends State<homepage_4thsem> {
                                   'Advanced Web Development',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w500,
-                                      fontSize: 16,
+                                      fontSize: MediaQuery.of(context).size.height*0.02,
                                       color:AppColors.text),
                                 )),
                             Container(

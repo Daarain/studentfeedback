@@ -29,7 +29,7 @@ class _homepage_2ndsemState extends State<homepage_2ndsem> {
           ' 2nd Sem Grievances',
           style: TextStyle(color: AppColors.text,
               fontWeight: FontWeight.bold,
-              fontSize: 30),
+              fontSize: MediaQuery.of(context).size.width*0.07),
         ),
         centerTitle: true,
 
@@ -60,24 +60,20 @@ class _homepage_2ndsemState extends State<homepage_2ndsem> {
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.06,
                   ),
-                  Row(children: [
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.23,
-                    ),
-                    Container(
+
+                  Center(
+                    child: Container(
 
                       child: Text(
                         'Select subject',
                         style: TextStyle(
                             color: AppColors.headingtext3,
                             fontWeight: FontWeight.w900,
-                            fontSize: 34),
+                            fontSize: MediaQuery.of(context).size.height*0.05),
                       ),
                     ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.23,
-                    ),
-                  ]),
+                  ),
+
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.06,
                   ),
@@ -85,7 +81,11 @@ class _homepage_2ndsemState extends State<homepage_2ndsem> {
                       height: MediaQuery.of(context).size.height * 0.05,
                       width: MediaQuery.of(context).size.width * 0.9,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, 'cmsform');
+
+
+                        },
                         child: Row(
                           children: [
                             Expanded(
@@ -93,7 +93,7 @@ class _homepage_2ndsemState extends State<homepage_2ndsem> {
                                   'Communication Skills ',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w500,
-                                      fontSize: 16,
+                                      fontSize: MediaQuery.of(context).size.height*0.02,
                                       color: AppColors.text),
                                 )),
                             Container(
@@ -116,7 +116,9 @@ class _homepage_2ndsemState extends State<homepage_2ndsem> {
                       height: MediaQuery.of(context).size.height * 0.05,
                       width: MediaQuery.of(context).size.width * 0.9,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, 'engineeringmathemathicsform');
+                        },
                         child: Row(
                           children: [
                             Expanded(
@@ -124,7 +126,7 @@ class _homepage_2ndsemState extends State<homepage_2ndsem> {
                                   'Engineering mathemathics ',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w500,
-                                      fontSize: 16,
+                                      fontSize: MediaQuery.of(context).size.height*0.02,
                                       color: AppColors.text),
                                 )),
                             Container(
@@ -147,7 +149,9 @@ class _homepage_2ndsemState extends State<homepage_2ndsem> {
                       height: MediaQuery.of(context).size.height * 0.05,
                       width: MediaQuery.of(context).size.width * 0.9,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, 'cppform');
+                        },
                         child: Row(
                           children: [
                             Expanded(
@@ -155,7 +159,7 @@ class _homepage_2ndsemState extends State<homepage_2ndsem> {
                                   'Programming in C++ ',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w500,
-                                      fontSize: 16,
+                                      fontSize: MediaQuery.of(context).size.height*0.02,
                                       color: AppColors.text),
                                 )),
                             Container(
@@ -178,7 +182,9 @@ class _homepage_2ndsemState extends State<homepage_2ndsem> {
                       height: MediaQuery.of(context).size.height * 0.05,
                       width: MediaQuery.of(context).size.width * 0.9,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, 'chmform');
+                        },
                         child: Row(
                           children: [
                             Expanded(
@@ -186,7 +192,7 @@ class _homepage_2ndsemState extends State<homepage_2ndsem> {
                                   'Computer Hardware and Maintenance',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w500,
-                                      fontSize: 16,
+                                      fontSize: MediaQuery.of(context).size.height*0.02,
                                       color: AppColors.text),
                                 )),
                             Container(
@@ -209,7 +215,9 @@ class _homepage_2ndsemState extends State<homepage_2ndsem> {
                       height: MediaQuery.of(context).size.height * 0.05,
                       width: MediaQuery.of(context).size.width * 0.9,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, 'dsform');
+                        },
                         child: Row(
                           children: [
                             Expanded(
@@ -217,7 +225,7 @@ class _homepage_2ndsemState extends State<homepage_2ndsem> {
                                   'Data Structures',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w500,
-                                      fontSize: 16,
+                                      fontSize: MediaQuery.of(context).size.height*0.02,
                                       color:AppColors.text),
                                 )),
                             Container(
@@ -240,7 +248,9 @@ class _homepage_2ndsemState extends State<homepage_2ndsem> {
                       height: MediaQuery.of(context).size.height * 0.05,
                       width: MediaQuery.of(context).size.width * 0.9,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, 'dteform');
+                        },
                         child: Row(
                           children: [
                             Expanded(
@@ -248,7 +258,7 @@ class _homepage_2ndsemState extends State<homepage_2ndsem> {
                                   ' Digital Techniques',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w500,
-                                      fontSize: 16,
+                                      fontSize: MediaQuery.of(context).size.height*0.02,
                                       color:AppColors.text),
                                 )),
                             Container(

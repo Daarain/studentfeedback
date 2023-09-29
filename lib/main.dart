@@ -15,6 +15,12 @@ import 'package:studentfeedback/forms/1semforms/beeeform.dart';
 import 'package:studentfeedback/forms/1semforms/cform.dart';
 import 'package:studentfeedback/forms/1semforms/mvcform.dart';
 import 'package:studentfeedback/forms/1semforms/wpdform.dart';
+import 'package:studentfeedback/forms/2semforms/chmform.dart';
+import 'package:studentfeedback/forms/2semforms/cmsform.dart';
+import 'package:studentfeedback/forms/2semforms/cppform.dart';
+import 'package:studentfeedback/forms/2semforms/ds.dart';
+import 'package:studentfeedback/forms/2semforms/dteform.dart';
+import 'package:studentfeedback/forms/2semforms/engineeringmathemathicsform.dart';
 
 
 import 'package:studentfeedback/intropages/About%20us.dart';
@@ -81,26 +87,24 @@ class _MyappState extends State<Myapp> {
           'beeeform':(context)=>beeeform(),
           'cform':(context)=>cform(),
           'wpdform':(context)=>wpdform(),
-          'mvcform':(context)=>mvcform()
+          'mvcform':(context)=>mvcform(),
 
           //2nd sem forms for filling the feedbacks
+          'cmsform':(context)=>cmsform(),
+          'chmform':(context)=>chmform(),
+          'dsform':(context)=>dsform(),
+          'dteform':(context)=>dteform(),
+          'engineeringmathemathicsform':(context)=>engineeringmathemathicsform(),
+          'cppform':(context)=>cppform(),
+
+          //3rd sem forms for filling the feedback
+
+
+
+
+
+
         });
   }
 }
-// class screen_chooser extends StatefulWidget {
-//   const screen_chooser({super.key});
-//
-//   @override
-//   State<screen_chooser> createState() => _screen_chooserState();
-// }
-//
-// class _screen_chooserState extends State<screen_chooser> {
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//
-// body: ,
-//     );
-//   }
-// }
 

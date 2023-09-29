@@ -75,7 +75,7 @@ class _basicmathemathicsform extends State<basicmathemathicsform> {
                           "Faculty related response :- ",
                           style: TextStyle(
                               fontSize:
-                              MediaQuery.of(context).size.height * 0.03,
+                              MediaQuery.of(context).size.width * 0.06,
                               fontWeight: FontWeight.bold),
                         ),
                       ),
@@ -86,7 +86,7 @@ class _basicmathemathicsform extends State<basicmathemathicsform> {
                       children: [
                         Container(
                           width: MediaQuery.of(context).size.width * 0.9,
-                          height: MediaQuery.of(context).size.height * 0.25,
+                          height: MediaQuery.of(context).size.height * 0.27,
                           decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(20)),
@@ -97,7 +97,7 @@ class _basicmathemathicsform extends State<basicmathemathicsform> {
                                 MediaQuery.of(context).size.height * 0.009,
                               ),
                               Container(
-                                width: MediaQuery.of(context).size.width * 0.75,
+                                width: MediaQuery.of(context).size.width * 0.8,
                                 height:
                                 MediaQuery.of(context).size.height * 0.03,
                                 alignment: Alignment.center,
@@ -154,7 +154,7 @@ class _basicmathemathicsform extends State<basicmathemathicsform> {
                       children: [
                         Container(
                           width: MediaQuery.of(context).size.width * 0.9,
-                          height: MediaQuery.of(context).size.height * 0.25,
+                          height: MediaQuery.of(context).size.height * 0.27,
                           decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(20)),
@@ -224,7 +224,7 @@ class _basicmathemathicsform extends State<basicmathemathicsform> {
                       children: [
                         Container(
                           width: MediaQuery.of(context).size.width * 0.9,
-                          height: MediaQuery.of(context).size.height * 0.25,
+                          height: MediaQuery.of(context).size.height * 0.27,
                           decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(20)),
@@ -292,7 +292,7 @@ class _basicmathemathicsform extends State<basicmathemathicsform> {
                       children: [
                         Container(
                           width: MediaQuery.of(context).size.width * 0.9,
-                          height: MediaQuery.of(context).size.height * 0.28,
+                          height: MediaQuery.of(context).size.height * 0.3,
                           decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(20)),
@@ -371,7 +371,7 @@ class _basicmathemathicsform extends State<basicmathemathicsform> {
                                 MediaQuery.of(context).size.height * 0.009,
                               ),
                               Container(
-                                width: MediaQuery.of(context).size.width * 0.75,
+                                width: MediaQuery.of(context).size.width * 0.85,
                                 alignment: Alignment.center,
                                 padding: EdgeInsets.all(
                                     MediaQuery.of(context).size.height * 0.01),
@@ -379,7 +379,7 @@ class _basicmathemathicsform extends State<basicmathemathicsform> {
                                     color: Colors.lightBlueAccent,
                                     borderRadius: BorderRadius.circular(20)),
                                 child: Text(
-                                  '  Q5 Relevance of the Content of curriculum',
+                                  'Q5 Relevance of the Content of curriculum',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w600,
                                       fontSize:
@@ -441,7 +441,7 @@ class _basicmathemathicsform extends State<basicmathemathicsform> {
                       child: Text(
                         "Course Outcomes related :- ",
                         style: TextStyle(
-                            fontSize: MediaQuery.of(context).size.height * 0.03,
+                            fontSize: MediaQuery.of(context).size.width * 0.06,
                             fontWeight: FontWeight.bold),
                       ),
                     ),
@@ -1043,7 +1043,7 @@ class _basicmathemathicsform extends State<basicmathemathicsform> {
                             "Facilities in the department:-",
                             style: TextStyle(
                                 fontSize:
-                                MediaQuery.of(context).size.height * 0.029,
+                                MediaQuery.of(context).size.width * 0.06,
                                 fontWeight: FontWeight.bold),
                           ),
                         ),
@@ -1057,7 +1057,7 @@ class _basicmathemathicsform extends State<basicmathemathicsform> {
                         children: [
                           Container(
                             width: MediaQuery.of(context).size.width * 0.9,
-                            height: MediaQuery.of(context).size.height * 0.25,
+                            height: MediaQuery.of(context).size.height * 0.27,
                             decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(20)),
@@ -1126,7 +1126,7 @@ class _basicmathemathicsform extends State<basicmathemathicsform> {
                         children: [
                           Container(
                             width: MediaQuery.of(context).size.width * 0.9,
-                            height: MediaQuery.of(context).size.height * 0.25,
+                            height: MediaQuery.of(context).size.height * 0.27,
                             decoration: BoxDecoration(
                                 color: Colors.white,
                                 borderRadius: BorderRadius.circular(20)),
@@ -1146,7 +1146,7 @@ class _basicmathemathicsform extends State<basicmathemathicsform> {
                                       color: Colors.lightBlueAccent,
                                       borderRadius: BorderRadius.circular(20)),
                                   child: Text(
-                                    'Q1 Availability of the reference books in library',
+                                    'Q2 Availability of the reference books in library',
                                     style: TextStyle(
                                         fontWeight: FontWeight.w600,
                                         fontSize:

@@ -26,26 +26,26 @@ class _HomepageState extends State<Homepage> {
 
           children: [
             SizedBox(height: MediaQuery.of(context).size.height*0.04,),
-            Row(
-              children: [
-                SizedBox(width: MediaQuery.of(context).size.width*0.25,),
-                Container(
 
-                  child: Image.asset('assets/images/Gpmlogo1.png',scale: 1,),
-                ),
-              ],
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Container(
+
+                child: Image.asset('assets/images/Gpmlogo1.png',scale: 1,),
+              ),
             ),
-            Container(
-              //color: Colors.yellow,
-              height: MediaQuery.of(context).size.height*0.1,
-              width: MediaQuery.of(context).size.width*0.8,
-              child: Text("Welcome",style: TextStyle(
-                // color: Colors.white38,
-                fontSize: MediaQuery.of(context).size.height*0.06,
-                fontFamily: 'Arvo',
-                fontWeight: FontWeight.w900
-              ),),
+            Center(
+              child: Container(
+                //color: Colors.yellow,
 
+                child: Text("Welcome",style: TextStyle(
+                  // color: Colors.white38,
+                  fontSize: MediaQuery.of(context).size.height*0.06,
+                  fontFamily: 'Arvo',
+                  fontWeight: FontWeight.w900
+                ),),
+
+              ),
             ),
             SizedBox(   height: MediaQuery.of(context).size.height*0.04, ),
 

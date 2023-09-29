@@ -33,7 +33,7 @@ class _homepage_1stsemState extends State<homepage_1stsem> {
           ' 1st Sem Grievances',
           style: TextStyle(color: AppColors.text,
               fontWeight: FontWeight.bold,
-              fontSize: 30),
+              fontSize: MediaQuery.of(context).size.width*0.07),
         ),
         centerTitle: true,
 
@@ -65,11 +65,9 @@ class _homepage_1stsemState extends State<homepage_1stsem> {
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.06,
                   ),
-                  Row(children: [
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.23,
-                    ),
-                    Container(
+
+                  Center(
+                    child: Container(
 
                       child: Text(
                         'Select subject',
@@ -79,10 +77,8 @@ class _homepage_1stsemState extends State<homepage_1stsem> {
                             fontSize: 34),
                       ),
                     ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.23,
-                    ),
-                  ]),
+                  ),
+
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.06,
                   ),
@@ -100,7 +96,7 @@ class _homepage_1stsemState extends State<homepage_1stsem> {
                                   'Applied Physics',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w500,
-                                      fontSize: 16,
+                                      fontSize: MediaQuery.of(context).size.height*0.02,
                                       color: AppColors.text),
                                 )),
                             Container(
@@ -133,7 +129,7 @@ class _homepage_1stsemState extends State<homepage_1stsem> {
                                   'Basic Mathemathics ',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w500,
-                                      fontSize: 16,
+                                      fontSize: MediaQuery.of(context).size.height*0.02,
                                       color: AppColors.text),
                                 )),
                             Container(
@@ -153,7 +149,7 @@ class _homepage_1stsemState extends State<homepage_1stsem> {
                     height: MediaQuery.of(context).size.height * 0.03,
                   ),
                   SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.05,
+                      height: MediaQuery.of(context).size.height * 0.07,
                       width: MediaQuery.of(context).size.width * 0.9,
                       child: ElevatedButton(
                         onPressed: () {
@@ -166,7 +162,7 @@ class _homepage_1stsemState extends State<homepage_1stsem> {
                                   'Basics of Electrical and Electronic Engineering',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w500,
-                                      fontSize: 16,
+                                      fontSize: MediaQuery.of(context).size.height*0.02,
                                       color: AppColors.text),
                                 )),
                             Container(
@@ -186,7 +182,7 @@ class _homepage_1stsemState extends State<homepage_1stsem> {
                     height: MediaQuery.of(context).size.height * 0.03,
                   ),
                   SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.06,
+                      height: MediaQuery.of(context).size.height * 0.07,
                       width: MediaQuery.of(context).size.width * 0.9,
                       child: ElevatedButton(
                         onPressed: () {
@@ -196,10 +192,10 @@ class _homepage_1stsemState extends State<homepage_1stsem> {
                           children: [
                             Expanded(
                                 child: Text(
-                                  ' Logic  Development  using  Programming   in C',
+                                  'Logic Development using Programming  in C',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w500,
-                                      fontSize: 16,
+                                      fontSize: MediaQuery.of(context).size.height*0.02,
                                       color: AppColors.text),
                                 )),
                             Container(
@@ -230,7 +226,7 @@ class _homepage_1stsemState extends State<homepage_1stsem> {
                                   'Web Page Design',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w500,
-                                      fontSize: 16,
+                                      fontSize: MediaQuery.of(context).size.height*0.02,
                                       color:AppColors.text),
                                 )),
                             Container(
@@ -261,7 +257,7 @@ class _homepage_1stsemState extends State<homepage_1stsem> {
                                   ' Multimedia and Video Creation',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w500,
-                                      fontSize: 16,
+                                      fontSize: MediaQuery.of(context).size.height*0.02,
                                       color:AppColors.text),
                                 )),
                             Container(
