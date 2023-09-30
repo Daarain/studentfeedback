@@ -85,8 +85,6 @@ class _Select_SemState extends State<Select_Sem> {
                                 borderRadius: BorderRadius.circular(15)),
                             backgroundColor: Colors.black),
                         onPressed: () {
-
-
                           switch (year_shift) {
                             case "FYFS" || "FYSS":
                               print('switch working');

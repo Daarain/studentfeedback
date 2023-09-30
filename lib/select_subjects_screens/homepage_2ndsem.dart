@@ -26,7 +26,7 @@ class _homepage_2ndsemState extends State<homepage_2ndsem> {
       backgroundColor: Colors.blue,
       appBar: AppBar(
         title: Text(
-          ' 2nd Sem Grievances',
+          '2nd Sem Grievances',
           style: TextStyle(color: AppColors.text,
               fontWeight: FontWeight.bold,
               fontSize: MediaQuery.of(context).size.width*0.07),

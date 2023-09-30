@@ -26,7 +26,7 @@ class _homepage_4thsemState extends State<homepage_4thsem> {
       backgroundColor: Colors.blue,
       appBar: AppBar(
         title: Text(
-          ' 2nd Sem Grievances',
+          '4th Sem Grievances',
           style: TextStyle(color: AppColors.text,
               fontWeight: FontWeight.bold,
               fontSize: MediaQuery.of(context).size.width*0.07),
@@ -38,7 +38,7 @@ class _homepage_4thsemState extends State<homepage_4thsem> {
         child: Column(
           children: [
             CircleAvatar(
-                radius: MediaQuery.of(context).size.width*0.2,
+                radius: MediaQuery.of(context).size.width*0.25,
                 backgroundImage: AssetImage('assets/images/Gpmlogo1.png'),
                 backgroundColor: Colors.transparent
 
@@ -48,7 +48,7 @@ class _homepage_4thsemState extends State<homepage_4thsem> {
             ),
 
             Container(
-              height: MediaQuery.of(context).size.height * 0.8,
+              height: MediaQuery.of(context).size.height * 0.68,
               width: MediaQuery.of(context).size.width * 1,
               decoration: BoxDecoration(
                   borderRadius: BorderRadius.only(
@@ -81,7 +81,9 @@ class _homepage_4thsemState extends State<homepage_4thsem> {
                       height: MediaQuery.of(context).size.height * 0.05,
                       width: MediaQuery.of(context).size.width * 0.9,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, 'osform');
+                        },
                         child: Row(
                           children: [
                             Expanded(
@@ -112,7 +114,9 @@ class _homepage_4thsemState extends State<homepage_4thsem> {
                       height: MediaQuery.of(context).size.height * 0.05,
                       width: MediaQuery.of(context).size.width * 0.9,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, 'seform');
+                        },
                         child: Row(
                           children: [
                             Expanded(
@@ -143,7 +147,9 @@ class _homepage_4thsemState extends State<homepage_4thsem> {
                       height: MediaQuery.of(context).size.height * 0.05,
                       width: MediaQuery.of(context).size.width * 0.9,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, 'ajpform');
+                        },
                         child: Row(
                           children: [
                             Expanded(
@@ -174,7 +180,9 @@ class _homepage_4thsemState extends State<homepage_4thsem> {
                       height: MediaQuery.of(context).size.height * 0.05,
                       width: MediaQuery.of(context).size.width * 0.9,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, 'madform');
+                        },
                         child: Row(
                           children: [
                             Expanded(
@@ -198,6 +206,7 @@ class _homepage_4thsemState extends State<homepage_4thsem> {
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(30))),
                       )),
+
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.03,
                   ),
@@ -205,38 +214,9 @@ class _homepage_4thsemState extends State<homepage_4thsem> {
                       height: MediaQuery.of(context).size.height * 0.05,
                       width: MediaQuery.of(context).size.width * 0.9,
                       child: ElevatedButton(
-                        onPressed: () {},
-                        child: Row(
-                          children: [
-                            Expanded(
-                                child: Text(
-                                  'Next Generation Databases',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.w500,
-                                      fontSize: MediaQuery.of(context).size.height*0.02,
-                                      color:AppColors.text),
-                                )),
-                            Container(
-                              child: Icon(
-                                Icons.add,
-                                color: AppColors.arrowcolor,
-                              ),
-                            )
-                          ],
-                        ),
-                        style: ElevatedButton.styleFrom(
-                            backgroundColor: Colors.blue,
-                            shape: RoundedRectangleBorder(
-                                borderRadius: BorderRadius.circular(30))),
-                      )),
-                  SizedBox(
-                    height: MediaQuery.of(context).size.height * 0.03,
-                  ),
-                  SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.05,
-                      width: MediaQuery.of(context).size.width * 0.9,
-                      child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, 'ngdform');
+                        },
                         child: Row(
                           children: [
                             Expanded(
@@ -266,7 +246,9 @@ class _homepage_4thsemState extends State<homepage_4thsem> {
                       height: MediaQuery.of(context).size.height * 0.05,
                       width: MediaQuery.of(context).size.width * 0.9,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context,'awdform');
+                        },
                         child: Row(
                           children: [
                             Expanded(

@@ -4,7 +4,6 @@ import 'package:studentfeedback/AppColors.dart';
 import 'package:studentfeedback/dataprovider.dart';
 
 
-
 class homepage_5thsem extends StatefulWidget {
   homepage_5thsem({Key? key}) : super(key: key);
 
@@ -16,17 +15,14 @@ class _homepageState extends State<homepage_5thsem> {
 
   @override
   Widget build(BuildContext context) {
-    final String year_shift= ModalRoute.of(context)!.settings.arguments as String;
+
     final dataprovider1=Provider.of<dataprovider>(context);
-    final username=dataprovider1.Username1;
-    final password=dataprovider1.Password1;
-    final shift=dataprovider1.Shift;
-    final year=dataprovider1.Year;
+
        return Scaffold(
       backgroundColor: Colors.blue,
       appBar: AppBar(
         title: Text(
-          ' 5Th Sem Grievances',
+          '5th Sem Grievances',
           style: TextStyle(color: AppColors.text,
               fontWeight: FontWeight.bold,
               fontSize: 30),
@@ -60,11 +56,9 @@ class _homepageState extends State<homepage_5thsem> {
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.06,
                   ),
-                  Row(children: [
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.23,
-                    ),
-                    Container(
+
+                  Center(
+                    child: Container(
 
                       child: Text(
                         'Select subject',
@@ -74,26 +68,29 @@ class _homepageState extends State<homepage_5thsem> {
                             fontSize: 34),
                       ),
                     ),
-                    SizedBox(
-                      width: MediaQuery.of(context).size.width * 0.23,
-                    ),
-                  ]),
+                  ),
+
                   SizedBox(
                     height: MediaQuery.of(context).size.height * 0.06,
                   ),
                   SizedBox(
+
                       height: MediaQuery.of(context).size.height * 0.05,
                       width: MediaQuery.of(context).size.width * 0.9,
+
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+
+                          Navigator.pushNamed(context, 'evsform');
+                        },
                         child: Row(
                           children: [
                             Expanded(
                                 child: Text(
-                                  'Environmental Studies ',
+                                  'Environmental Studies',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w500,
-                                      fontSize: 16,
+                                      fontSize: MediaQuery.of(context).size.height*0.02,
                                       color: AppColors.text),
                                 )),
                             Container(
@@ -116,7 +113,9 @@ class _homepageState extends State<homepage_5thsem> {
                       height: MediaQuery.of(context).size.height * 0.05,
                       width: MediaQuery.of(context).size.width * 0.9,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, 'stform');
+                        },
                         child: Row(
                           children: [
                             Expanded(
@@ -124,7 +123,7 @@ class _homepageState extends State<homepage_5thsem> {
                                   'Software Testing',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w500,
-                                      fontSize: 16,
+                                      fontSize: MediaQuery.of(context).size.height*0.02,
                                       color: AppColors.text),
                                 )),
                             Container(
@@ -147,7 +146,9 @@ class _homepageState extends State<homepage_5thsem> {
                       height: MediaQuery.of(context).size.height * 0.05,
                       width: MediaQuery.of(context).size.width * 0.9,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, 'csform');
+                        },
                         child: Row(
                           children: [
                             Expanded(
@@ -155,7 +156,7 @@ class _homepageState extends State<homepage_5thsem> {
                                   'Computer Security ',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w500,
-                                      fontSize: 16,
+                                      fontSize: MediaQuery.of(context).size.height*0.02,
                                       color: AppColors.text),
                                 )),
                             Container(
@@ -186,7 +187,7 @@ class _homepageState extends State<homepage_5thsem> {
                                   'Major Project ',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w500,
-                                      fontSize: 16,
+                                      fontSize: MediaQuery.of(context).size.height*0.02,
                                       color: AppColors.text),
                                 )),
                             Container(
@@ -206,10 +207,12 @@ class _homepageState extends State<homepage_5thsem> {
                     height: MediaQuery.of(context).size.height * 0.03,
                   ),
                   SizedBox(
-                      height: MediaQuery.of(context).size.height * 0.05,
+                      height: MediaQuery.of(context).size.height * 0.07,
                       width: MediaQuery.of(context).size.width * 0.9,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, 'nmaform');
+                        },
                         child: Row(
                           children: [
                             Expanded(
@@ -217,7 +220,7 @@ class _homepageState extends State<homepage_5thsem> {
                                   'Network Management and Administration',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w500,
-                                      fontSize: 16,
+                                      fontSize: MediaQuery.of(context).size.height*0.02,
                                       color:AppColors.text),
                                 )),
                             Container(
@@ -240,15 +243,17 @@ class _homepageState extends State<homepage_5thsem> {
                       height: MediaQuery.of(context).size.height * 0.05,
                       width: MediaQuery.of(context).size.width * 0.9,
                       child: ElevatedButton(
-                        onPressed: () {},
+                        onPressed: () {
+                          Navigator.pushNamed(context, 'darform');
+                        },
                         child: Row(
                           children: [
                             Expanded(
                                 child: Text(
-                                  'Data Analytics using r',
+                                  'Data Analytics using R',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w500,
-                                      fontSize: 16,
+                                      fontSize: MediaQuery.of(context).size.height*0.02,
                                       color:AppColors.text),
                                 )),
                             Container(
@@ -278,7 +283,7 @@ class _homepageState extends State<homepage_5thsem> {
                                   'Entrepreneurship and Startups',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w500,
-                                      fontSize: 16,
+                                      fontSize: MediaQuery.of(context).size.height*0.02 ,
                                       color:AppColors.text),
                                 )),
                             Container(

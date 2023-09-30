@@ -21,6 +21,22 @@ import 'package:studentfeedback/forms/2semforms/cppform.dart';
 import 'package:studentfeedback/forms/2semforms/ds.dart';
 import 'package:studentfeedback/forms/2semforms/dteform.dart';
 import 'package:studentfeedback/forms/2semforms/engineeringmathemathicsform.dart';
+import 'package:studentfeedback/forms/3semforms/cnforms.dart';
+import 'package:studentfeedback/forms/3semforms/dbmsform.dart';
+import 'package:studentfeedback/forms/3semforms/javaform.dart';
+import 'package:studentfeedback/forms/3semforms/mpform.dart';
+import 'package:studentfeedback/forms/3semforms/pythonform.dart';
+import 'package:studentfeedback/forms/4semforms/ajpform.dart';
+import 'package:studentfeedback/forms/4semforms/awdform.dart';
+import 'package:studentfeedback/forms/4semforms/madform.dart';
+import 'package:studentfeedback/forms/4semforms/ngdform.dart';
+import 'package:studentfeedback/forms/4semforms/osform.dart';
+import 'package:studentfeedback/forms/4semforms/seform.dart';
+import 'package:studentfeedback/forms/5semforms/csform.dart';
+import 'package:studentfeedback/forms/5semforms/darform.dart';
+import 'package:studentfeedback/forms/5semforms/evsform.dart';
+import 'package:studentfeedback/forms/5semforms/nmaform.dart';
+import 'package:studentfeedback/forms/5semforms/stform.dart';
 
 
 import 'package:studentfeedback/intropages/About%20us.dart';
@@ -98,6 +114,26 @@ class _MyappState extends State<Myapp> {
           'cppform':(context)=>cppform(),
 
           //3rd sem forms for filling the feedback
+          'cnform':(context)=>cnform(),
+          'dbmsform':(context)=>dbmsform(),
+          'pythonform':(context)=>pythonform(),
+          'javaform':(context)=>javaform(),
+          'mpform':(context)=>mpform(),
+
+          //4th sem forms for filling the feedback
+          'osform':(context)=>osform(),
+          'seform':(context)=>seform(),
+          'ajpform':(context)=>ajpform(),
+          'madform':(context)=>madform(),
+          'awdform':(context)=>awdform(),
+          'ngdform':(context)=>ngdform(),
+
+          //5th sem forms for filling the feedback
+          'evsform':(context)=>evsform(),
+          'csform':(context)=>csform(),
+          'stform':(context)=>stform(),
+          'nmaform':(context)=>nmaform(),
+          'darform':(context)=>darform(),
 
 
 

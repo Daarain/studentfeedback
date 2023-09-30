@@ -23,7 +23,7 @@ class _homepage_3rdsemState extends State<homepage_3rdsem> {
       backgroundColor: Colors.blue,
       appBar: AppBar(
         title: Text(
-          ' 3rd Sem Grievances',
+          '3rd Sem Grievances',
           style: TextStyle(
               color: AppColors.text, fontWeight: FontWeight.bold, fontSize: MediaQuery.of(context).size.width*0.07),
         ),
@@ -72,7 +72,9 @@ class _homepage_3rdsemState extends State<homepage_3rdsem> {
                         height: MediaQuery.of(context).size.height * 0.05,
                         width: MediaQuery.of(context).size.width * 0.9,
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(context, 'mpform');
+                          },
                           child: Row(
                             children: [
                               Expanded(
@@ -80,7 +82,7 @@ class _homepage_3rdsemState extends State<homepage_3rdsem> {
                                 'Microprocessors',
                                 style: TextStyle(
                                     fontWeight: FontWeight.w500,
-                                    fontSize: MediaQuery.of(context).size.width*0.045,
+                                    fontSize: MediaQuery.of(context).size.height*0.02,
                                     color: AppColors.text),
                               )),
                               Container(
@@ -103,7 +105,9 @@ class _homepage_3rdsemState extends State<homepage_3rdsem> {
                         height: MediaQuery.of(context).size.height * 0.05,
                         width: MediaQuery.of(context).size.width * 0.9,
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(context, 'javaform');
+                          },
                           child: Row(
                             children: [
                               Expanded(
@@ -111,7 +115,7 @@ class _homepage_3rdsemState extends State<homepage_3rdsem> {
                                 'Programming in Java',
                                 style: TextStyle(
                                     fontWeight: FontWeight.w500,
-                                    fontSize: MediaQuery.of(context).size.width*0.045,
+                                    fontSize: MediaQuery.of(context).size.height*0.02,
                                     color: AppColors.text),
                               )),
                               Container(
@@ -134,7 +138,9 @@ class _homepage_3rdsemState extends State<homepage_3rdsem> {
                         height: MediaQuery.of(context).size.height * 0.05,
                         width: MediaQuery.of(context).size.width * 0.9,
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(context, 'pythonform');
+                          },
                           child: Row(
                             children: [
                               Expanded(
@@ -142,7 +148,7 @@ class _homepage_3rdsemState extends State<homepage_3rdsem> {
                                 'Functional Programming in Python',
                                 style: TextStyle(
                                     fontWeight: FontWeight.w500,
-                                    fontSize: MediaQuery.of(context).size.width*0.045,
+                                    fontSize: MediaQuery.of(context).size.height*0.02,
                                     color: AppColors.text),
                               )),
                               Container(
@@ -165,7 +171,10 @@ class _homepage_3rdsemState extends State<homepage_3rdsem> {
                         height: MediaQuery.of(context).size.height * 0.05,
                         width: MediaQuery.of(context).size.width * 0.9,
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+
+                            Navigator.pushNamed(context, 'cnform');
+                          },
                           child: Row(
                             children: [
                               Expanded(
@@ -173,7 +182,7 @@ class _homepage_3rdsemState extends State<homepage_3rdsem> {
                                 'Computer Networks',
                                 style: TextStyle(
                                     fontWeight: FontWeight.w500,
-                                    fontSize: MediaQuery.of(context).size.width*0.045,
+                                    fontSize: MediaQuery.of(context).size.height*0.02,
                                     color: AppColors.text),
                               )),
                               Container(
@@ -196,7 +205,9 @@ class _homepage_3rdsemState extends State<homepage_3rdsem> {
                         height: MediaQuery.of(context).size.height * 0.05,
                         width: MediaQuery.of(context).size.width * 0.9,
                         child: ElevatedButton(
-                          onPressed: () {},
+                          onPressed: () {
+                            Navigator.pushNamed(context, 'dbmsform');
+                          },
                           child: Row(
                             children: [
                               Expanded(
@@ -204,7 +215,7 @@ class _homepage_3rdsemState extends State<homepage_3rdsem> {
                                 'Database Management Systems',
                                 style: TextStyle(
                                     fontWeight: FontWeight.w500,
-                                    fontSize: MediaQuery.of(context).size.width*0.045,
+                                    fontSize: MediaQuery.of(context).size.height*0.02,
                                     color: AppColors.text),
                               )),
                               Container(

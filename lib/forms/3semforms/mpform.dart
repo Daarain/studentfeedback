@@ -4,11 +4,11 @@ import 'package:provider/provider.dart';
 import 'package:studentfeedback/AppColors.dart';
 import 'package:studentfeedback/dataprovider.dart';
 
-class basicmathemathicsform extends StatefulWidget {
-  const basicmathemathicsform({super.key});
+class mpform extends StatefulWidget {
+  const mpform({super.key});
 
   @override
-  State<basicmathemathicsform> createState() => _basicmathemathicsform();
+  State<mpform> createState() => _mpform();
 }
 
 //THIS LIST IS USED FOR MANAGING THE OPTIONS SELECTED IN THE RADIO BUTTONS
@@ -40,14 +40,13 @@ TextEditingController c4 = new TextEditingController();
 TextEditingController c5 = new TextEditingController();
 TextEditingController c6 = new TextEditingController();
 
-class _basicmathemathicsform extends State<basicmathemathicsform> {
+class _mpform extends State<mpform> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: Colors.lightBlueAccent,
       appBar: AppBar(
-        title: Text(
-          "Basic Mathemathics",
+        title: Text("Microprocessors",
           style: TextStyle(
               fontSize: MediaQuery.of(context).size.height * 0.03,
               color: Colors.black,
@@ -168,7 +167,7 @@ class _basicmathemathicsform extends State<basicmathemathicsform> {
                                 alignment: Alignment.center,
                                 padding: EdgeInsets.all(
                                     MediaQuery.of(context).size.height * 0.01),
-                                width: MediaQuery.of(context).size.width * 0.83,
+                                width: MediaQuery.of(context).size.width * 0.85,
                                 height:
                                 MediaQuery.of(context).size.height * 0.04,
                                 decoration: BoxDecoration(
@@ -238,7 +237,7 @@ class _basicmathemathicsform extends State<basicmathemathicsform> {
                                 alignment: Alignment.center,
                                 padding: EdgeInsets.all(
                                     MediaQuery.of(context).size.height * 0.01),
-                                width: MediaQuery.of(context).size.width * 0.82,
+                                width: MediaQuery.of(context).size.width * 0.85,
                                 decoration: BoxDecoration(
                                     color: Colors.lightBlueAccent,
                                     borderRadius: BorderRadius.circular(20)),
@@ -292,7 +291,7 @@ class _basicmathemathicsform extends State<basicmathemathicsform> {
                       children: [
                         Container(
                           width: MediaQuery.of(context).size.width * 0.9,
-                          height: MediaQuery.of(context).size.height * 0.3,
+                          height: MediaQuery.of(context).size.height * 0.27,
                           decoration: BoxDecoration(
                               color: Colors.white,
                               borderRadius: BorderRadius.circular(20)),
@@ -306,7 +305,7 @@ class _basicmathemathicsform extends State<basicmathemathicsform> {
                                 alignment: Alignment.center,
                                 padding: EdgeInsets.all(
                                     MediaQuery.of(context).size.height * 0.01),
-                                width: MediaQuery.of(context).size.width * 0.83,
+                                width: MediaQuery.of(context).size.width * 0.85,
                                 decoration: BoxDecoration(
                                     color: Colors.lightBlueAccent,
                                     borderRadius: BorderRadius.circular(20)),
@@ -379,7 +378,7 @@ class _basicmathemathicsform extends State<basicmathemathicsform> {
                                     color: Colors.lightBlueAccent,
                                     borderRadius: BorderRadius.circular(20)),
                                 child: Text(
-                                  'Q5 Relevance of the Content of curriculum',
+                                  '  Q5 Relevance of the Content of curriculum',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w600,
                                       fontSize:
@@ -1233,12 +1232,12 @@ class _basicmathemathicsform extends State<basicmathemathicsform> {
           .ref()
           .child('student')
           .child('year')
-          .child('FY')
+          .child('SY')
           .child(shift)
           .child(username1)
           .child('greviances')
           .child('grevianceofsem1')
-          .child('basicmathemathics')
+          .child('microprocessor')
           .child('courseoutcomesrelated')
           .child('cranswer1');
 
@@ -1246,60 +1245,60 @@ class _basicmathemathicsform extends State<basicmathemathicsform> {
           .ref()
           .child('student')
           .child('year')
-          .child('FY')
+          .child('SY')
           .child(shift)
           .child(username1)
           .child('greviances')
           .child('grevianceofsem1')
-          .child('basicmathemathics')
+          .child('microprocessor')
           .child('courseoutcomesrelated')
           .child('cranswer2');
       DatabaseReference dbref3 = FirebaseDatabase.instance
           .ref()
           .child('student')
           .child('year')
-          .child('FY')
+          .child('SY')
           .child(shift)
           .child(username1)
           .child('greviances')
           .child('grevianceofsem1')
-          .child('basicmathemathics')
+          .child('microprocessor')
           .child('courseoutcomesrelated')
           .child('cranswer3');
       DatabaseReference dbref4 = FirebaseDatabase.instance
           .ref()
           .child('student')
           .child('year')
-          .child('FY')
+          .child('SY')
           .child(shift)
           .child(username1)
           .child('greviances')
           .child('grevianceofsem1')
-          .child('basicmathemathics')
+          .child('microprocessor')
           .child('courseoutcomesrelated')
           .child('cranswer4');
       DatabaseReference dbref5 = FirebaseDatabase.instance
           .ref()
           .child('student')
           .child('year')
-          .child('FY')
+          .child('SY')
           .child(shift)
           .child(username1)
           .child('greviances')
           .child('grevianceofsem1')
-          .child('basicmathemathics')
+          .child('microprocessor')
           .child('courseoutcomesrelated')
           .child('cranswer5');
       DatabaseReference dbref6 = FirebaseDatabase.instance
           .ref()
           .child('student')
           .child('year')
-          .child('FY')
+          .child('SY')
           .child(shift)
           .child(username1)
           .child('greviances')
           .child('grevianceofsem1')
-          .child('basicmathemathics')
+          .child('microprocessor')
           .child('courseoutcomesrelated')
           .child('cranswer6');
 
@@ -1375,17 +1374,17 @@ class _basicmathemathicsform extends State<basicmathemathicsform> {
           .ref()
           .child('student')
           .child('year')
-          .child('FY')
+          .child('SY')
           .child(shift)
           .child(username1)
           .child('greviances')
           .child('grevianceofsem1')
-          .child('basicmathemathics')
+          .child('microprocessor')
           .child('facilityrelated');
 
       Map<String, dynamic> facdata = {
         "facanswer1": M3Q1_options,
-        "facanswer2": M3Q2_options
+        //   "facanswer2": M3Q2_options
       };
 
       dbref.update(facdata).then((_) {
@@ -1410,12 +1409,12 @@ class _basicmathemathicsform extends State<basicmathemathicsform> {
           .ref()
           .child('student')
           .child('year')
-          .child('FY')
+          .child('SY')
           .child(shift)
           .child(username1)
           .child('greviances')
           .child('grevianceofsem1')
-          .child('basicmathemathics')
+          .child('microprocessor')
           .child('facultyrelated');
 
       Map<String, dynamic> frdata = {

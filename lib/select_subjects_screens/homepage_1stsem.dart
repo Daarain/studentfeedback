@@ -254,7 +254,7 @@ class _homepage_1stsemState extends State<homepage_1stsem> {
                           children: [
                             Expanded(
                                 child: Text(
-                                  ' Multimedia and Video Creation',
+                                  'Multimedia and Video Creation',
                                   style: TextStyle(
                                       fontWeight: FontWeight.w500,
                                       fontSize: MediaQuery.of(context).size.height*0.02,
