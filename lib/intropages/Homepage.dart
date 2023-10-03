@@ -61,7 +61,7 @@ class _HomepageState extends State<Homepage> {
 
              // color: Colors.blue,
               padding: EdgeInsets.all(20),
-              height: MediaQuery.of(context).size.height*0.65,
+              height: MediaQuery.of(context).size.height*0.6,
               width: MediaQuery.of(context).size.width,
               child: Text("Welcome to the Student Grievance App – Your Voice, Your Solution! We understand that every student deserves a supportive and fair educational experience, which is why we've created this platform to empower you. Whether you're facing academic challenges, administrative issues, or any concerns related to your educational journey, we're here to help you find solutions. Our user-friendly interface allows you to submit grievances, track their progress, and connect with relevant authorities quickly and efficiently. At Student Grievance App, we're committed to fostering a positive learning environment where your feedback matters. Together, let's ensure that your voice is heard, and your concerns are addressed, because every student deserves a fair and equitable education.. ",style: TextStyle(fontSize: MediaQuery.of(context).size.height*0.02,fontWeight: FontWeight.bold,color: AppColors.uppertext),),
             )

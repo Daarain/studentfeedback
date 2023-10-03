@@ -73,6 +73,22 @@ class _loginpageState extends State<loginpage> {
         fontSize: 16,
         textColor: Colors.white);
   }
+  void toast3() {
+    Fluttertoast.showToast(
+        msg: 'Invalid Sear or Shift ',
+        toastLength: Toast.LENGTH_SHORT,
+        backgroundColor: Colors.black,
+        fontSize: 16,
+        textColor: Colors.white);
+  }
+  void toast4() {
+    Fluttertoast.showToast(
+        msg: 'Logging in',
+        toastLength: Toast.LENGTH_SHORT,
+        backgroundColor: Colors.black,
+        fontSize: 16,
+        textColor: Colors.white);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -338,6 +354,7 @@ class _loginpageState extends State<loginpage> {
       } else {
         // User not found. Display an error message or perform appropriate handling.
         print('User not found');
+        toast3();
       }
     } catch (e) {
       print('Error: $e');

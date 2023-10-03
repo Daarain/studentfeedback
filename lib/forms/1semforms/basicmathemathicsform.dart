@@ -1,5 +1,6 @@
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:provider/provider.dart';
 import 'package:studentfeedback/AppColors.dart';
 import 'package:studentfeedback/dataprovider.dart';
@@ -39,6 +40,24 @@ TextEditingController c3 = new TextEditingController();
 TextEditingController c4 = new TextEditingController();
 TextEditingController c5 = new TextEditingController();
 TextEditingController c6 = new TextEditingController();
+
+//toast
+void toast() {
+  Fluttertoast.showToast(
+      msg: 'Greivance submitted',
+      toastLength: Toast.LENGTH_SHORT,
+      backgroundColor: Colors.black,
+      fontSize: 16,
+      textColor: Colors.white);
+}
+void toast2() {
+  Fluttertoast.showToast(
+      msg: 'Error saving Greivance',
+      toastLength: Toast.LENGTH_SHORT,
+      backgroundColor: Colors.black,
+      fontSize: 16,
+      textColor: Colors.white);
+}
 
 class _basicmathemathicsform extends State<basicmathemathicsform> {
   @override
@@ -1069,7 +1088,7 @@ class _basicmathemathicsform extends State<basicmathemathicsform> {
                                 ),
                                 Container(
                                   width:
-                                  MediaQuery.of(context).size.width * 0.8,
+                                  MediaQuery.of(context).size.width * 0.85,
                                   height:
                                   MediaQuery.of(context).size.height * 0.04,
                                   alignment: Alignment.center,
@@ -1428,7 +1447,9 @@ class _basicmathemathicsform extends State<basicmathemathicsform> {
 
       dbref.update(frdata).then((_) {
         print("data added successfully");
+        toast();
       }).catchError((error) {
+
         print("$error");
       });
     } catch (e) {

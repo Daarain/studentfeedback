@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:fluttertoast/fluttertoast.dart';
 import 'package:provider/provider.dart';
 import 'package:studentfeedback/dataprovider.dart';
 
@@ -19,6 +20,17 @@ class _Select_SemState extends State<Select_Sem> {
     final password=dataprovider1.Password1;
     final shift=dataprovider1.Shift;
     final year=dataprovider1.Year;
+
+
+    void toast() {
+      Fluttertoast.showToast(
+          msg: 'There are no greivances for 6th sem ',
+          toastLength: Toast.LENGTH_SHORT,
+          backgroundColor: Colors.black,
+          fontSize: 16,
+          textColor: Colors.white);
+    }
+
 
 
 
@@ -157,7 +169,7 @@ class _Select_SemState extends State<Select_Sem> {
                               break;
 
                             case "TYFS" || "TYSS":
-                              Navigator.pushNamed(context, 'homepage_6thsem');
+                          toast();
                               break;
                           }
                         },
