@@ -75,7 +75,7 @@ class _loginpageState extends State<loginpage> {
   }
   void toast3() {
     Fluttertoast.showToast(
-        msg: 'Invalid Sear or Shift ',
+        msg: 'Invalid Year or Shift ',
         toastLength: Toast.LENGTH_SHORT,
         backgroundColor: Colors.black,
         fontSize: 16,
@@ -98,9 +98,14 @@ class _loginpageState extends State<loginpage> {
 
     return Scaffold(
         backgroundColor: Colors.lightBlueAccent,
+        appBar: AppBar(
+          title: Text("Student Log-In",style: TextStyle(fontSize: MediaQuery.of(context).size.height*0.03),),
+          centerTitle: true,
+
+        ),
         body: SingleChildScrollView(
           child: Padding(
-            padding: EdgeInsets.all(MediaQuery.of(context).size.width*0.06),
+            padding: EdgeInsets.only(left: MediaQuery.of(context).size.width*0.06,right:  MediaQuery.of(context).size.width*0.06),
             child: Column(
               children: [
                 // SizedBox(
@@ -108,7 +113,7 @@ class _loginpageState extends State<loginpage> {
                 // ),
                 Container(
                   height: MediaQuery.of(context).size.height * 0.25,
-                  // color: Colors.blue,
+
                   alignment: Alignment.center,
                   child: CircleAvatar(
                     backgroundColor: Colors.transparent,
@@ -151,7 +156,7 @@ class _loginpageState extends State<loginpage> {
                   height: MediaQuery.of(context).size.height * 0.0,
                 ),
                 Container(
-                  height: MediaQuery.of(context).size.height * 0.6,
+                  height: MediaQuery.of(context).size.height * 0.58,
                   width: MediaQuery.of(context).size.width * 0.9,
                   decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(30),
@@ -236,7 +241,7 @@ class _loginpageState extends State<loginpage> {
                         child: TextField(
                           controller: Username,
                           decoration: const InputDecoration(
-                              hintText: 'Enter in Upper Case',
+                              hintText: 'Ex:- FS23CO001',
                               labelText: 'Enrollment no ',
                               fillColor: Colors.white,
                               filled: true,
@@ -307,7 +312,7 @@ class _loginpageState extends State<loginpage> {
                       )
                     ],
                   ),
-                )
+                ),SizedBox(height: MediaQuery.of(context).size.height*0.02,)
               ],
             ),
           ),
@@ -337,11 +342,14 @@ class _loginpageState extends State<loginpage> {
       DatabaseEvent userSnapshot =
           await databaseReference.child(enteredUsername).once();
 
+
+
+
       if (userSnapshot.snapshot.value != null) {
         Map<String, dynamic> userData =
             Map<String, dynamic>.from(userSnapshot.snapshot.value as Map);
         String storedPassword = userData['password'];
-        print(storedPassword);
+
         if (enteredPassword == storedPassword) {
           // Password matches, perform the necessary actions (e.g., navigate to the next screen).
           toast();
@@ -423,6 +431,7 @@ class _loginpageState extends State<loginpage> {
             Map<String, dynamic>.from(userSnapshot.snapshot.value as Map);
         String storedPassword = userData['password'];
         print(storedPassword);
+
         if (enteredPassword == storedPassword) {
           // Password matches, perform the necessary actions (e.g., navigate to the next screen).
           toast();

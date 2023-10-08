@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
 
 class AppColors {
+  static const greenblue=Color.fromRGBO(68, 208, 254, 1);
+  static const greenblue2=Color.fromRGBO(82,210 ,250 , 1);
+  static const bgscreen=Color.fromRGBO(219,241 ,252 , 1);
   static const login_page_bg_color=Color.fromRGBO(120, 220, 255, 1);
   // For Home Page
 static const deepblue=Color.fromRGBO(3, 33, 44, 1);
