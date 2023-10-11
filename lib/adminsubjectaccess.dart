@@ -22,11 +22,23 @@ class _adminsubjectaccessState extends State<adminsubjectaccess> {
 
         children: <Widget>[
           InkWell(
-            onTap:(){},
+            onTap:(){
+              Navigator.pushNamed(context, 'apg');
+            },
             child: Container(
-              height: MediaQuery.of(context).size.height*0.08,
-              color: Colors.blueAccent,
-              child:Text('Subjects of 1st Sem ')
+
+              height: MediaQuery.of(context).size.height*0.1,
+              color: Colors.white,
+              child:Padding(
+                padding:  EdgeInsets.only(left: MediaQuery.of(context).size.width*0.07,right: MediaQuery.of(context).size.width*0.07,top:  MediaQuery.of(context).size.width*0.05,bottom:  MediaQuery.of(context).size.width*0.03 ),
+                child: Container(
+
+                  decoration: BoxDecoration(
+                    color: Colors.blueAccent,
+                    borderRadius: BorderRadius.circular(30)
+                  ),
+                ),
+              )
             ),
           ),
           Container(

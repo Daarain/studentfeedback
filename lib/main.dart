@@ -35,6 +35,7 @@ import 'package:studentfeedback/forms/5semforms/darform.dart';
 import 'package:studentfeedback/forms/5semforms/evsform.dart';
 import 'package:studentfeedback/forms/5semforms/nmaform.dart';
 import 'package:studentfeedback/forms/5semforms/stform.dart';
+import 'package:studentfeedback/greviance_activity/applied_physics_greivance.dart';
 
 import 'package:studentfeedback/intropages/About%20us.dart';
 import 'package:studentfeedback/intropages/NAV_PAGE.dart';
@@ -133,7 +134,8 @@ class _MyappState extends State<Myapp> {
           'darform': (context) => darform(),
 
           //admin subject access pages
-          'adminsubjectaccess':(context)=>adminsubjectaccess()
+          'adminsubjectaccess':(context)=>adminsubjectaccess(),
+          'apg':(context)=>apg()
 
         });
   }

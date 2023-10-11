@@ -38,8 +38,9 @@ class _NAV_PAGEState extends State<NAV_PAGE> {
     return Scaffold(
 
   bottomNavigationBar:BottomNavigationBar(
-      selectedItemColor: Colors.blue,
-      backgroundColor: AppColors.darkblue,
+
+      selectedItemColor: Colors.black,
+      backgroundColor: Colors.blueAccent,
       currentIndex: selectedindex,
 
       onTap: nbg,

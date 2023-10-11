@@ -96,227 +96,242 @@ class _loginpageState extends State<loginpage> {
     dp1.setdata(Username.text, Password.text, shift.text, year.text);
 
 
-    return Scaffold(
-        backgroundColor: Colors.lightBlueAccent,
-        appBar: AppBar(
-          title: Text("Student Log-In",style: TextStyle(fontSize: MediaQuery.of(context).size.height*0.03),),
-          centerTitle: true,
+    return Container(
+      decoration: BoxDecoration(
+        gradient: LinearGradient(
+          begin: Alignment.topCenter,
+            end: FractionalOffset.bottomCenter,
 
-        ),
-        body: SingleChildScrollView(
-          child: Padding(
-            padding: EdgeInsets.only(left: MediaQuery.of(context).size.width*0.06,right:  MediaQuery.of(context).size.width*0.06),
-            child: Column(
-              children: [
-                // SizedBox(
-                //   height: MediaQuery.of(context).size.height * 0.04,
-                // ),
-                Container(
-                  height: MediaQuery.of(context).size.height * 0.25,
+          colors: [
+            Colors.lightBlueAccent,
+            Colors.white,
+          Colors.lightBlueAccent
+          ]
+        )
+      ),
+      child: Scaffold(
 
-                  alignment: Alignment.center,
-                  child: CircleAvatar(
-                    backgroundColor: Colors.transparent,
-                    radius: MediaQuery.of(context).size.width * 0.4,
-                    child: Image.asset(
-                      'assets/images/Gpmlogo1.png',
-                      scale: .9,
+        backgroundColor: Colors.transparent,
+          appBar: AppBar(
+            title: Text("Student Log-In",style: TextStyle(fontSize: MediaQuery.of(context).size.height*0.03),),
+            centerTitle: true,
+
+          ),
+          body: SingleChildScrollView(
+            child: Padding(
+              padding: EdgeInsets.only(left: MediaQuery.of(context).size.width*0.06,right:  MediaQuery.of(context).size.width*0.06),
+              child: Column(
+                children: [
+                  // SizedBox(
+                  //   height: MediaQuery.of(context).size.height * 0.04,
+                  // ),
+                  Container(
+                    height: MediaQuery.of(context).size.height * 0.25,
+
+                    alignment: Alignment.center,
+                    child: CircleAvatar(
+                      backgroundColor: Colors.transparent,
+                      radius: MediaQuery.of(context).size.width * 0.4,
+                      child: Image.asset(
+                        'assets/images/Gpmlogo1.png',
+                        scale: .9,
+                      ),
                     ),
                   ),
-                ),
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.17,
-                ),
-                Container(
-                  alignment: Alignment.center,
-                  height: MediaQuery.of(context).size.height * 0.06,
-                  width: MediaQuery.of(context).size.width * 0.9,
-                  child: Text(
-                    'Government Polytechnic ',
-                    style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: MediaQuery.of(context).size.height * 0.028),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.17,
                   ),
-                ),
-                SizedBox(
-                  width: MediaQuery.of(context).size.width * 0.3,
-                ),
-                Container(
-                  alignment: Alignment.center,
-                  height: MediaQuery.of(context).size.height * 0.07,
-                  width: MediaQuery.of(context).size.width * 0.5  ,
-                  child: Text(
-                    'Mumbai',
-                    style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: MediaQuery.of(context).size.height * 0.028),
+                  Container(
+                    alignment: Alignment.center,
+                    height: MediaQuery.of(context).size.height * 0.06,
+                    width: MediaQuery.of(context).size.width * 0.9,
+                    child: Text(
+                      'Government Polytechnic ',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: MediaQuery.of(context).size.height * 0.028),
+                    ),
                   ),
-                ),
-                SizedBox(
-                  height: MediaQuery.of(context).size.height * 0.0,
-                ),
-                Container(
-                  height: MediaQuery.of(context).size.height * 0.58,
-                  width: MediaQuery.of(context).size.width * 0.9,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(30),
-                      color: AppColors.rectanglebox,
-                      border: Border.all(width: 2, color: Colors.blue)),
-                  child: Column(
-                    children: [
-                      SizedBox(
-                        height: MediaQuery.of(context).size.height * 0.04,
-                      ),
-                      Container(
-                        child: Text(
-                          'Welcome back',
-                          style: TextStyle(
-                              fontFamily: 'Arvo',
-                              fontSize: MediaQuery.of(context).size.height * 0.03,
-                              fontWeight: FontWeight.w900),
+                  SizedBox(
+                    width: MediaQuery.of(context).size.width * 0.3,
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    height: MediaQuery.of(context).size.height * 0.07,
+                    width: MediaQuery.of(context).size.width * 0.5  ,
+                    child: Text(
+                      'Mumbai',
+                      style: TextStyle(
+                          fontWeight: FontWeight.w500,
+                          fontSize: MediaQuery.of(context).size.height * 0.028),
+                    ),
+                  ),
+                  SizedBox(
+                    height: MediaQuery.of(context).size.height * 0.0,
+                  ),
+                  Container(
+                    height: MediaQuery.of(context).size.height * 0.58,
+                    width: MediaQuery.of(context).size.width * 0.9,
+                    decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(30),
+                        color: AppColors.rectanglebox,
+                        border: Border.all(width: 2, color: Colors.blue)),
+                    child: Column(
+                      children: [
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.04,
                         ),
-                      ),
-                      SizedBox(
-                        height: MediaQuery.of(context).size.height * 0.03,
-                      ),
-                      Container(
-                        width: MediaQuery.of(context).size.width * 0.7,
-                        child: TextField(
-                          controller: year,
-                          //   obscureText: true,
-                          decoration: const InputDecoration(
-                              hintText: 'Enter in uppercase',
-                              labelText: 'Year ',
-                              fillColor: Colors.white,
-                              filled: true,
-                              labelStyle: TextStyle(color: Colors.black),
-                              floatingLabelBehavior: FloatingLabelBehavior.always,
-                              contentPadding: EdgeInsets.symmetric(
-                                  vertical: 10, horizontal: 16),
-                              border: OutlineInputBorder(),
-                              enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                color: Colors.blueAccent,
-                                width: 2,
-                              )),
-                              focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                      color: Colors.deepPurple, width: 2))),
-                        ),
-                      ),
-                      // Container(
-                      //   height: MediaQuery.of(context).size.height * 0.02,
-                      //   child: Text("Enter your year and shift"),
-                      // ),
-                      SizedBox(height: MediaQuery.of(context).size.height * 0.03),
-                      Container(
-                        width: MediaQuery.of(context).size.width * 0.7,
-                        child: TextField(
-                          controller: shift,
-                          decoration: const InputDecoration(
-                              hintText: 'Enter in Uppercase',
-                              labelText: 'SHIFT',
-                              fillColor: Colors.white,
-                              filled: true,
-                              labelStyle: TextStyle(color: Colors.black),
-                              floatingLabelBehavior: FloatingLabelBehavior.always,
-                              contentPadding: EdgeInsets.symmetric(
-                                  vertical: 10, horizontal: 16),
-                              border: OutlineInputBorder(),
-                              enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                    color: Colors.blueAccent,
-                                    width: 2,
-                                  )),
-                              focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                      color: Colors.deepPurple, width: 2))),
-                        ),
-                      ),
-                       SizedBox(height: MediaQuery.of(context).size.height * 0.03),
-
-
-                      Container(
-                        width: MediaQuery.of(context).size.width * 0.7,
-                        child: TextField(
-                          controller: Username,
-                          decoration: const InputDecoration(
-                              hintText: 'Ex:- FS23CO001',
-                              labelText: 'Enrollment no ',
-                              fillColor: Colors.white,
-                              filled: true,
-                              labelStyle: TextStyle(color: Colors.black),
-                              floatingLabelBehavior: FloatingLabelBehavior.always,
-                              contentPadding: EdgeInsets.symmetric(
-                                  vertical: 10, horizontal: 16),
-                              border: OutlineInputBorder(),
-                              enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                color: Colors.blueAccent,
-                                width: 2,
-                              )),
-                              focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                      color: Colors.deepPurple, width: 2))),
-                        ),
-                      ),
-                      SizedBox(
-                        height: MediaQuery.of(context).size.height * 0.03,
-                      ),
-                      Container(
-                        width: MediaQuery.of(context).size.width * 0.7,
-                        child: TextField(
-                          controller: Password,
-                          //   obscureText: true,
-                          decoration: const InputDecoration(
-                              hintText: 'Enter in Upper Case',
-                              labelText: 'Password',
-                              fillColor: Colors.white,
-                              filled: true,
-                              labelStyle: TextStyle(color: Colors.black),
-                              floatingLabelBehavior: FloatingLabelBehavior.always,
-                              contentPadding: EdgeInsets.symmetric(
-                                  vertical: 10, horizontal: 16),
-                              border: OutlineInputBorder(),
-                              enabledBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                color: Colors.blueAccent,
-                                width: 2,
-                              )),
-                              focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                      color: Colors.deepPurple, width: 2))),
-                        ),
-                      ),
-                      SizedBox(
-                        height: MediaQuery.of(context).size.height * 0.05,
-                      ),
-                      Container(
-                        height: MediaQuery.of(context).size.height * 0.05,
-                        width: MediaQuery.of(context).size.width * 0.4,
-                        child: ElevatedButton(
-                          onPressed: (){
-                            choosinguserforauthprocess();
-                          },
+                        Container(
                           child: Text(
-                            'Login',
+                            'Welcome back',
                             style: TextStyle(
-                              fontSize: MediaQuery.of(context).size.height * 0.02,
-                            ),
+                                fontFamily: 'Arvo',
+                                fontSize: MediaQuery.of(context).size.height * 0.03,
+                                fontWeight: FontWeight.w900),
                           ),
-                          style: ElevatedButton.styleFrom(
-                              backgroundColor: Colors.blueAccent,
-                              shape: RoundedRectangleBorder(
-                                  borderRadius: BorderRadius.circular(30))),
                         ),
-                      )
-                    ],
-                  ),
-                ),SizedBox(height: MediaQuery.of(context).size.height*0.02,)
-              ],
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.03,
+                        ),
+                        Container(
+                          width: MediaQuery.of(context).size.width * 0.7,
+                          child: TextField(
+                            controller: year,
+                            //   obscureText: true,
+                            decoration: const InputDecoration(
+                                hintText: 'Enter in uppercase',
+                                labelText: 'Year ',
+                                fillColor: Colors.white,
+                                filled: true,
+                                labelStyle: TextStyle(color: Colors.black),
+                                floatingLabelBehavior: FloatingLabelBehavior.always,
+                                contentPadding: EdgeInsets.symmetric(
+                                    vertical: 10, horizontal: 16),
+                                border: OutlineInputBorder(),
+                                enabledBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                  color: Colors.blueAccent,
+                                  width: 2,
+                                )),
+                                focusedBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                        color: Colors.deepPurple, width: 2))),
+                          ),
+                        ),
+                        // Container(
+                        //   height: MediaQuery.of(context).size.height * 0.02,
+                        //   child: Text("Enter your year and shift"),
+                        // ),
+                        SizedBox(height: MediaQuery.of(context).size.height * 0.03),
+                        Container(
+                          width: MediaQuery.of(context).size.width * 0.7,
+                          child: TextField(
+                            controller: shift,
+                            decoration: const InputDecoration(
+                                hintText: 'Enter in Uppercase',
+                                labelText: 'SHIFT',
+                                fillColor: Colors.white,
+                                filled: true,
+                                labelStyle: TextStyle(color: Colors.black),
+                                floatingLabelBehavior: FloatingLabelBehavior.always,
+                                contentPadding: EdgeInsets.symmetric(
+                                    vertical: 10, horizontal: 16),
+                                border: OutlineInputBorder(),
+                                enabledBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                      color: Colors.blueAccent,
+                                      width: 2,
+                                    )),
+                                focusedBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                        color: Colors.deepPurple, width: 2))),
+                          ),
+                        ),
+                         SizedBox(height: MediaQuery.of(context).size.height * 0.03),
+
+
+                        Container(
+                          width: MediaQuery.of(context).size.width * 0.7,
+                          child: TextField(
+                            controller: Username,
+                            decoration: const InputDecoration(
+                                hintText: 'Ex:- FS23CO001',
+                                labelText: 'Enrollment no ',
+                                fillColor: Colors.white,
+                                filled: true,
+                                labelStyle: TextStyle(color: Colors.black),
+                                floatingLabelBehavior: FloatingLabelBehavior.always,
+                                contentPadding: EdgeInsets.symmetric(
+                                    vertical: 10, horizontal: 16),
+                                border: OutlineInputBorder(),
+                                enabledBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                  color: Colors.blueAccent,
+                                  width: 2,
+                                )),
+                                focusedBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                        color: Colors.deepPurple, width: 2))),
+                          ),
+                        ),
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.03,
+                        ),
+                        Container(
+                          width: MediaQuery.of(context).size.width * 0.7,
+                          child: TextField(
+                            controller: Password,
+                            //   obscureText: true,
+                            decoration: const InputDecoration(
+                                hintText: 'Enter in Upper Case',
+                                labelText: 'Password',
+                                fillColor: Colors.white,
+                                filled: true,
+                                labelStyle: TextStyle(color: Colors.black),
+                                floatingLabelBehavior: FloatingLabelBehavior.always,
+                                contentPadding: EdgeInsets.symmetric(
+                                    vertical: 10, horizontal: 16),
+                                border: OutlineInputBorder(),
+                                enabledBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                  color: Colors.blueAccent,
+                                  width: 2,
+                                )),
+                                focusedBorder: OutlineInputBorder(
+                                    borderSide: BorderSide(
+                                        color: Colors.deepPurple, width: 2))),
+                          ),
+                        ),
+                        SizedBox(
+                          height: MediaQuery.of(context).size.height * 0.05,
+                        ),
+                        Container(
+                          height: MediaQuery.of(context).size.height * 0.05,
+                          width: MediaQuery.of(context).size.width * 0.4,
+                          child: ElevatedButton(
+                            onPressed: (){
+                              choosinguserforauthprocess();
+                            },
+                            child: Text(
+                              'Login',
+                              style: TextStyle(
+                                fontSize: MediaQuery.of(context).size.height * 0.02,
+                              ),
+                            ),
+                            style: ElevatedButton.styleFrom(
+                                backgroundColor: Colors.blueAccent,
+                                shape: RoundedRectangleBorder(
+                                    borderRadius: BorderRadius.circular(30))),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),SizedBox(height: MediaQuery.of(context).size.height*0.02,)
+                ],
+              ),
             ),
-          ),
-        ));
+          )),
+    );
   }
 
   Future<void> loginUse1() async {

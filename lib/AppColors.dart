@@ -85,4 +85,6 @@ static const deepblue=Color.fromRGBO(3, 33, 44, 1);
   static const Color text1 = Color.fromRGBO(103, 108, 110, 1);
  //Rectangle container color of homepage
   static const Color rectanglebox = Color.fromRGBO(189,233,249,1);
+  static const Color roundcontainerhomepage=Color.fromRGBO(43, 113, 244, 1);
+  static const Color selectsempageroundcontainer=Color.fromRGBO(45, 121, 244, 1);
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:provider/provider.dart';
+import 'package:studentfeedback/AppColors.dart';
 import 'package:studentfeedback/dataprovider.dart';
 
 
@@ -64,7 +65,7 @@ class _Select_SemState extends State<Select_Sem> {
                   gradient: LinearGradient(
                     begin: Alignment.topCenter,
                     end: Alignment.bottomCenter,
-                    colors: [Colors.blueAccent, Colors.black],
+                    colors: [ AppColors.selectsempageroundcontainer,Colors.cyanAccent],
                   )),
               child: Column(
                 children: [
@@ -89,13 +90,20 @@ class _Select_SemState extends State<Select_Sem> {
                     width: MediaQuery.of(context).size.width * 0.7,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
-                      border: Border.all(color: Colors.white, width: 2),
+                        boxShadow: [
+                          BoxShadow(
+                            color: Colors.black.withOpacity(0.3), // Shadow color
+                            spreadRadius: 5, // Spread radius
+                            blurRadius: 7, // Blur radius
+                            offset: Offset(0, 3), // Offset (vertical, horizontal)
+                          ),
+                        ]
                     ),
                     child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15)),
-                            backgroundColor: Colors.black),
+                            backgroundColor: Colors.cyan.shade200),
                         onPressed: () {
                           switch (year_shift) {
                             case "FYFS" || "FYSS":
@@ -125,7 +133,7 @@ class _Select_SemState extends State<Select_Sem> {
                                     fontSize:
                                         MediaQuery.of(context).size.height *
                                             0.03,
-                                    fontWeight: FontWeight.w300),
+                                    fontWeight: FontWeight.w500),
                               ),
                             ),
                             Container(
@@ -151,13 +159,21 @@ class _Select_SemState extends State<Select_Sem> {
                     width: MediaQuery.of(context).size.width * 0.7,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(15),
-                      border: Border.all(color: Colors.black, width: 2),
+                      // border: Border.all(color: Colors.black, width: 2),
+                      boxShadow: [
+                        BoxShadow(
+                          color: Colors.black.withOpacity(0.3), // Shadow color
+                          spreadRadius: 5, // Spread radius
+                          blurRadius: 7, // Blur radius
+                          offset: Offset(0, 3), // Offset (vertical, horizontal)
+                        ),
+                      ]
                     ),
                     child: ElevatedButton(
                         style: ElevatedButton.styleFrom(
                             shape: RoundedRectangleBorder(
                                 borderRadius: BorderRadius.circular(15)),
-                            backgroundColor: Colors.white),
+                            backgroundColor: Colors.lightBlue.shade300),
                         onPressed: () {
                           switch (year_shift) {
                             case "FYFS" || "FYSS":
