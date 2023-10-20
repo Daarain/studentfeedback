@@ -149,7 +149,7 @@ class _loginpageState extends State<loginpage> {
                       'Government Polytechnic ',
                       style: TextStyle(
                           fontWeight: FontWeight.w500,
-                          fontSize: MediaQuery.of(context).size.height * 0.028),
+                          fontSize: MediaQuery.of(context).size.height * 0.03),
                     ),
                   ),
                   SizedBox(
@@ -199,8 +199,8 @@ class _loginpageState extends State<loginpage> {
                             controller: year,
                             //   obscureText: true,
                             decoration: const InputDecoration(
-                                hintText: 'Enter in uppercase',
-                                labelText: 'Year ',
+                                hintText: 'Enter in Upper case',
+                                labelText: 'Year',
                                 fillColor: Colors.white,
                                 filled: true,
                                 labelStyle: TextStyle(color: Colors.black),
@@ -228,8 +228,8 @@ class _loginpageState extends State<loginpage> {
                           child: TextField(
                             controller: shift,
                             decoration: const InputDecoration(
-                                hintText: 'Enter in Uppercase',
-                                labelText: 'SHIFT',
+                                hintText: 'Enter in Upper case',
+                                labelText: 'Shift',
                                 fillColor: Colors.white,
                                 filled: true,
                                 labelStyle: TextStyle(color: Colors.black),
@@ -281,9 +281,9 @@ class _loginpageState extends State<loginpage> {
                           width: MediaQuery.of(context).size.width * 0.7,
                           child: TextField(
                             controller: Password,
-                            //   obscureText: true,
+                               obscureText: true,
                             decoration: const InputDecoration(
-                                hintText: 'Enter in Upper Case',
+                                hintText: 'Enter your password',
                                 labelText: 'Password',
                                 fillColor: Colors.white,
                                 filled: true,

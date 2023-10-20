@@ -41,6 +41,11 @@ dependencies:
   google_nav_bar: ^5.0.6
   provider: ^6.0.5
   flutter_launcher_icons: ^0.13.1
+  csv: ^5.0.2
+  path_provider: ^2.1.1
+  path_provider_android: ^2.2.0
+  open_file: ^3.3.2
+
 
 dev_dependencies:
   flutter_test:
@@ -76,6 +81,7 @@ flutter:
     - assets/images/Gpmlogo1.png
     - assets/images/Gpmlogo1.jpg
     - assets/images/primarypage.png
+    - assets/images/adminprof.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware

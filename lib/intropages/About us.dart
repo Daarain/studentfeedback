@@ -16,13 +16,15 @@ class _AboutusState extends State<Aboutus> {
         height:MediaQuery.of(context).size.height ,
         width:MediaQuery.of(context).size.width,
         color: Colors.blueAccent,
-        child: Text(
-          'To be developed\n ,'
-              'Be pateint\n,'
-              'we are working on it '
-            ,  style: TextStyle(
-            fontSize: MediaQuery.of(context).size.height*0.05
-        ),
+        child: Center(
+          child: Text(
+            'To be developed\n ,'
+                'Be pateint\n,'
+                'we are working on it '
+              ,  style: TextStyle(
+              fontSize: MediaQuery.of(context).size.height*0.05
+          ),
+          ),
         ),
       )
 

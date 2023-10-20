@@ -1,10 +1,10 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/material.dart';
+import 'package:open_file/open_file.dart';
 import 'package:provider/provider.dart';
 import 'package:studentfeedback/admin_loginpage.dart';
 import 'package:studentfeedback/adminsubjectaccess.dart';
-
 import 'package:studentfeedback/dataprovider.dart';
 import 'package:studentfeedback/firebase_options.dart';
 import 'package:studentfeedback/forms/1semforms/appliedphysicsform.dart';
@@ -51,11 +51,14 @@ import 'package:studentfeedback/select_subjects_screens/homepage_6thSem.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+
+
   await Firebase.initializeApp(
     options: DefaultFirebaseOptions.currentPlatform,
   );
   runApp(
-    ChangeNotifierProvider(
+
+      ChangeNotifierProvider(
       create: (context) => dataprovider(),
       child: Myapp(),
     ),
@@ -107,8 +110,7 @@ class _MyappState extends State<Myapp> {
           'chmform': (context) => chmform(),
           'dsform': (context) => dsform(),
           'dteform': (context) => dteform(),
-          'engineeringmathemathicsform': (context) =>
-              engineeringmathemathicsform(),
+          'engineeringmathemathicsform': (context) => engineeringmathemathicsform(),
           'cppform': (context) => cppform(),
 
           //3rd sem forms for filling the feedback

@@ -92,7 +92,7 @@ class _Select_SemState extends State<Select_Sem> {
                       borderRadius: BorderRadius.circular(15),
                         boxShadow: [
                           BoxShadow(
-                            color: Colors.black.withOpacity(0.3), // Shadow color
+                            color: Colors.black.withOpacity(0.2), // Shadow color
                             spreadRadius: 5, // Spread radius
                             blurRadius: 7, // Blur radius
                             offset: Offset(0, 3), // Offset (vertical, horizontal)
@@ -162,7 +162,7 @@ class _Select_SemState extends State<Select_Sem> {
                       // border: Border.all(color: Colors.black, width: 2),
                       boxShadow: [
                         BoxShadow(
-                          color: Colors.black.withOpacity(0.3), // Shadow color
+                          color: Colors.black.withOpacity(0.2), // Shadow color
                           spreadRadius: 5, // Spread radius
                           blurRadius: 7, // Blur radius
                           offset: Offset(0, 3), // Offset (vertical, horizontal)
