@@ -5,6 +5,9 @@ import 'package:fluttertoast/fluttertoast.dart';
 import 'package:open_file/open_file.dart';
 import 'dart:io';
 import 'package:path_provider/path_provider.dart';
+import 'package:path/path.dart' as p;
+import 'package:permission_handler/permission_handler.dart';
+
 
 class datahold{
   late String enrollmentno;
@@ -36,14 +39,7 @@ class apg extends StatefulWidget {
 class _apgState extends State<apg> {
 
 
-  void toast() {
-    Fluttertoast.showToast(
-        msg: 'Unhandled Exception: MissingPluginException(No implementation found for method open_file on channel open_file)  ',
-        toastLength: Toast.LENGTH_SHORT,
-        backgroundColor: Colors.black,
-        fontSize: 16,
-        textColor: Colors.white);
-  }
+
   Future<void> genCSV() async {
 
 
@@ -94,31 +90,17 @@ class _apgState extends State<apg> {
       dhList[i] = [dhl];
       // dhList.add(dhl);
     }
+    
     await writeCSV(dhList);
-
+   print("method working ");
     }catch(e){
       print("$e");
     }
 
   }
 
-  Future<void> writeCSV(List<List<dynamic>> rows) async {
 
-    try {
-      String csv = ListToCsvConverter().convert(rows);
-      csv = csv.replaceAll("[", "");
-      csv = csv.replaceAll("]", "");
-      csv = csv.replaceAll("\"", "");
-      // csv = csv.substring(1, csv.length -1 );
-      final Directory directory = await getApplicationDocumentsDirectory();
-      print("${directory.path}");
-      final File file = File('./${directory.path}/data.csv');
-      await file.writeAsString(csv);
-      OpenFile.open('./${directory.path}/data.csv');
-    }catch(e){
-    toast();
-    }
-    }
+
 
   @override
   Widget build(BuildContext context) {
@@ -148,4 +130,53 @@ class _apgState extends State<apg> {
 
     );
   }
+}
+Future<void> writeCSV(List<List<dynamic>> rows) async {
+  try {
+    String csv = ListToCsvConverter().convert(rows);
+    csv = csv.replaceAll("[", "");
+    csv = csv.replaceAll("]", "");
+    csv = csv.replaceAll("\"", "");
+
+    final Directory directory = await getApplicationDocumentsDirectory();
+    final String filePath = p.join(directory.path, 'data.csv'); // Use the 'join' method
+
+    final File file = File(filePath);
+    await file.writeAsString(csv);
+
+
+    var status = await Permission.storage.request();
+    print(status);
+    if (status.isGranted) {
+      OpenFile.open(filePath);
+      // Permission is granted, you can now read and write to storage.
+    } else if(status.isDenied){
+      // Permission is denied or revoked. Handle accordingly.
+      toast();
+      await openAppSettings();
+
+
+    }else{
+      print('unknown error');
+    }
+    print("${directory.path}");
+  } catch (e) {
+    toast2();
+  }
+}
+void toast() {
+  Fluttertoast.showToast(
+      msg:'permission not granted' ,
+      toastLength: Toast.LENGTH_SHORT,
+      backgroundColor: Colors.black,
+      fontSize: 16,
+      textColor: Colors.white);
+}
+void toast2() {
+  Fluttertoast.showToast(
+      msg:'Unknown error' ,
+      toastLength: Toast.LENGTH_SHORT,
+      backgroundColor: Colors.black,
+      fontSize: 16,
+      textColor: Colors.white);
 }
